@@ -5,11 +5,15 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      email: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoUser = this.handleDemoUser.bind(this);
   }
-
+  componentDidMount() {
+    this.props.clearErrors()
+  }
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -20,6 +24,12 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+  }
+
+  handleDemoUser(e) {
+    e.preventDefault();
+    const demoUser = Object.assign({}, {   username: 'guest', password: 'password', email: 'guest' });
+    this.props.processForm(demoUser);
   }
 
   renderErrors() {
@@ -52,6 +62,14 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
+            <label>Email:
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="login-input"
+              />
+            </label>
+            <br/>
             <label>Password:
               <input type="password"
                 value={this.state.password}
@@ -61,6 +79,7 @@ class SessionForm extends React.Component {
             </label>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
+            <button onClick={this.handleDemoUser}>Secret Entrance</button>
           </div>
         </form>
       </div>

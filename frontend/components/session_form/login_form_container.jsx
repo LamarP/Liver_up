@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { login } from '../../actions/session_actions';
 import SessionForm from './session_form';
-
+import {clearSessionErrors} from '../../actions/session_actions'
+// import {demoLogin} from '../../actions/session_actions'
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
@@ -15,6 +16,8 @@ const mapStateToProps = ({ errors }) => {
 const mapDispatchToProps = dispatch => {
   return {
     processForm: (user) => dispatch(login(user)),
+    // demo: (user) => dispatch(demoLogin(user)),
+    clearErrors: () => dispatch(clearSessionErrors()),
   };
 };
 
