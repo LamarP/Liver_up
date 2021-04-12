@@ -17,8 +17,7 @@ const App = () => (
   <div>
     <Modal />
     <header>
-      <Link to="/" className="header-link">
-      </Link>
+      
       {/* <GreetingContainer /> */}
     </header>
     <Switch>
