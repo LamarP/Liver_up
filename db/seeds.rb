@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.delete_all
+Drink.delete_all
+Review.delete_all
+# users
 
 u1 = User.create!(
   username: 'guest',
@@ -18,3 +21,35 @@ u2 = User.create!(
   password: 'password',
   email: 'username'
 )
+
+# drinks
+
+drink1 = Drink.create!({
+  drink_name: "Mariposa",
+  bar_id: bar1.id,
+  style: "Sour",
+  base_spirit: "Mezcal"
+  rating: 4.5,
+  description: "",
+  abv: 90000,
+  
+  })
+drink2 = Drink.create!({
+  drink_name: "Apple juice",
+  bar_id: bar1.id,
+  style: "Sweet",
+  base_spirit: "apples"
+  rating: 4.5,
+  description: "it's apple juice",
+  abv: 0,
+  
+  })
+
+# reviews
+
+Review.create!([
+  {drink_id: 5, author_id: 1, body: "slurred mumbling", rating: 4.7},
+  {drink_id: 3, author_id: 3, body: "I can't feel feelings!", rating: 3.2},
+  {drink_id: 2, author_id: 2, body: "a delicate balance of aromatics make the spirit pop!", rating: 3},
+  {drink_id: 2, author_id: 1, body: "gimme back my keys!", rating: 2.4}
+])
