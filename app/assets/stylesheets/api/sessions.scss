@@ -1,3 +1,103 @@
 // Place all the styles related to the api::sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html { 
+  background: url(https://media.istockphoto.com/vectors/vector-background-with-bar-night-cafe-in-rain-vector-id1007769496?k=6&m=1007769496&s=612x612&w=0&h=tVuH8QlL5A8ql-3PZMk2mbf9eAa8TkHHz1qgOw52kqU=) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+ body {
+   font-family: 'Abel', sans-serif;
+ }
+
+
+.content {
+ height: 100%;
+}
+
+header {
+  margin-top: 5%;
+  margin-right: 5%;
+  display: flex;
+  
+}
+
+.header-content-container{
+  width: 1048px;
+  display: flex;
+  align-items: center;
+  
+}
+h2 {
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  display: flex;
+  font-family: Helvetica, sans-serif;
+  font-size: 32px; 
+  font-style: normal;
+  line-height: 32px;
+  margin-top: 100px;
+  margin-block-end: 10px;
+  margin-block-start: 0px;
+  margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.header-name {
+ margin: 7px 0 0 0;
+ padding: 15px 20px
+}
+
+
+.login-form-container {
+ display: flex;
+ justify-content: center;
+ margin-top: 100px;
+}
+
+.login-form {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+}
+
+.login-input {
+ margin-left: 20px;
+}
+
+.login-form-box {
+ display: block;
+ padding: 20px;
+ border-radius: 5px;
+ background-color: white;
+ justify-content: space-around;
+}
+.login-form-box > ul {
+  margin-top: 20px;
+}
+.logo {
+  color: rgb(95, 93, 93);
+  font-size: 75px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+  
+}
+
+.header-link {
+ text-decoration: none;
+ color: rgb(37, 36, 36);
+
+}
+
+hr {
+ border-bottom: 1px solid grey;
+}
+
+.session-submit {
+ text-transform: capitalize;
+ 
+}

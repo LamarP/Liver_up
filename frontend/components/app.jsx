@@ -19,13 +19,13 @@ const App = () => (
     <header>
       <Link to="/" className="header-link">
       </Link>
-      <GreetingContainer />
+      {/* <GreetingContainer /> */}
     </header>
     <Switch>
-      <Route exact path="/" component={Home} />
+      {/* <Route exact path="/" component={Home} /> */}
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-
+      <Route path="/" component={GreetingContainer}/>
     </Switch>
   </div>
 );

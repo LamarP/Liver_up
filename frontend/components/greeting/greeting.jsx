@@ -5,11 +5,16 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
-    <nav className="login-signup">
-      <Link to="/login">Sign in</Link>
-      &nbsp;&nbsp;
-      <Link to="/signup">create an account</Link>
-    </nav>
+    <div className="login-signup">
+      <div className="buttons">
+        <Link to="/login">Sign in</Link>
+        &nbsp;&nbsp;
+        <Link to="/signup">create an account</Link>
+      </div>
+      <div className="entrance_page">
+        <div className="slogan">Discover and share your inner demons.</div>
+      </div> 
+    </div>
   );
   const personalGreeting = () => (
     <hgroup className="header-group">
@@ -17,9 +22,8 @@ const Greeting = ({ currentUser, logout }) => {
       <button className="header-button" onClick={logout}>Log Out</button>
     </hgroup>
   );
-
+    
   return currentUser ? personalGreeting() : sessionLinks();
 };
-
 
 export default Greeting;

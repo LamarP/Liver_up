@@ -33,17 +33,11 @@
 header {
   margin-top: 5%;
   margin-right: 5%;
-  display: flex;
-  justify-content: flex-end;
+ 
 }
 
-.header-content-container{
-  width: 1048px;
-  display: flex;
-  align-items: center;
-  
-}
-h2 {
+
+.slogan {
   box-sizing: border-box;
   color: rgb(255, 255, 255);
   display: flex;
@@ -65,21 +59,8 @@ h2 {
  padding: 15px 20px
 }
 
-nav.login-signup > a {
-  display: inline-block;
-  color: rgb(235, 230, 230);
-  border: 2px solid rgb(235, 230, 230);
-  border-radius: 4px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.login-form-container {
- display: flex;
- justify-content: center;
- margin-top: 100px;
-}
+
+
 
 .login-form {
  display: flex;

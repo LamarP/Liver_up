@@ -1,0 +1,28 @@
+.login-signup {
+  display: flex;
+  flex-direction:column;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.buttons > a {
+  display: inline-block;
+  color: rgb(235, 230, 230);
+  border: 2px solid rgb(235, 230, 230);
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  float: right;
+ 
+}
+
+.buttons :hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
