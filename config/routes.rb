@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   get 'static/pages'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   namespace :api, defaults: {format: :json} do
-    resource :user, only: [:create, :index, :show]
+    resources :user, only: [:create, :index, :show]
     resource :session, only: [:create, :destroy, :show]
-    resource :reviews, only: [:create, :show, :index, :destroy, :update]
+    resources :reviews, only: [:create, :show, :index, :destroy, :update]
+    resources :drinks, only: [:show, :index]
   end
 
   root "static_pages#root"

@@ -6,7 +6,7 @@ class Review < ApplicationRecord
   class_name: :Drink
 
   belongs_to :user,
-  foreign_key: :authour_id,
-  class_name: :user
+  foreign_key: :author_id,
+  class_name: :User
   
 end

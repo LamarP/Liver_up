@@ -1,7 +1,7 @@
 class Api::DrinksController < ApplicationController
 
   def index
-    @drinks = Drinks.all
+    @drinks = Drink.all
     render :index
   end
 

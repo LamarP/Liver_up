@@ -1,5 +1,5 @@
 class Drink < ApplicationRecord
-  validates :drink_name, :description, :abv, :base_spirit, :bar_id, presence: true
+  validates :drink_name, :description, :abv, :base_spirit, presence: true
 
   belongs_to :bar,
   foreign_key: :bar_id,

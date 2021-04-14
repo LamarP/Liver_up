@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_12_215331) do
+ActiveRecord::Schema.define(version: 2021_04_14_183106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_04_12_215331) do
   create_table "bars", force: :cascade do |t|
     t.string "name", null: false
     t.string "location", null: false
-    t.string "type", null: false
+    t.string "style", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_bars_on_name"
@@ -29,21 +29,20 @@ ActiveRecord::Schema.define(version: 2021_04_12_215331) do
     t.string "description", null: false
     t.integer "abv", null: false
     t.string "base_spirit", null: false
-    t.integer "bar_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["bar_id"], name: "index_drinks_on_bar_id"
+    t.integer "bar_id"
     t.index ["drink_name"], name: "index_drinks_on_drink_name"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string "body", null: false
     t.float "rating", null: false
-    t.integer "authour_id", null: false
+    t.integer "author_id", null: false
     t.integer "drink_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["authour_id"], name: "index_reviews_on_authour_id"
+    t.index ["author_id"], name: "index_reviews_on_author_id"
     t.index ["drink_id"], name: "index_reviews_on_drink_id"
   end
 
