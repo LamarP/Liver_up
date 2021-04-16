@@ -65,7 +65,7 @@ drinks = {
     abv: details["abv"],
     drink_style: details["drink_style"],
     bar_id: details["bar_id"],
-    img_url: "#{num}.jpeg"
+    img_url: "#{num}.png"
   )
  end
   

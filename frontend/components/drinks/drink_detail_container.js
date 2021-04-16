@@ -4,7 +4,7 @@ import DrinkDetail from "./drink_detail";
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    drink: state.entities.drink[ownProps.match.params.drinkId]
+    drink: state.entities.drinks[ownProps.match.params.drinkId]
   }
 }
 

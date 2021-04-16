@@ -7,7 +7,7 @@ const drinksReducer = (state = {}, action) => {
     case RECEIVE_ALL_DRINKS:
       return Object.assign({}, action.drinks, state);
     case RECEIVE_DRINK:
-      nextState[action.payload.drink.id] = action.payload.drink;
+      nextState[action.drink.id] = action.drink;
       return nextState;
     default:
       return state;

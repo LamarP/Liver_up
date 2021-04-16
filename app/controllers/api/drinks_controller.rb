@@ -20,7 +20,9 @@ class Api::DrinksController < ApplicationController
     params.require(:drink).permit(
       :drink_name, 
       :description, 
-      :abv, 
+      :abv,
+      :drink_style,
+      :img_url,
       :base_spirit, 
       :bar_id)
   end

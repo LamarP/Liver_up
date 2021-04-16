@@ -13,6 +13,7 @@ class DrinkIndexItem extends React.Component{
       <li className="drink-index-item">
         <Link to={`/drink/${this.props.drink.id}`}>
           <span>{this.props.drink.id}</span>
+          {/* <img src={this.props.drink.img_url}/> */}
           <span>{this.props.drink.drink_name}</span>
         </Link>
       </li>

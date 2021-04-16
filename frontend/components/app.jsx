@@ -18,17 +18,13 @@ import Modal from './modal/modal';
 const App = () => (
   <div>
     <Modal />
-    <header>
-      
-      {/* <GreetingContainer /> */}
-    </header>
+   
     <Switch>
-      {/* <Route exact path="/" component={Home} /> */}
+      <Route exact path="/" component={Home} />
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      <ProtectedRoute path="/" component={DrinkIndexContainer} />
-      <ProtectedRoute path="/drink/:drinkId" component={DrinkDetailContainer} />
-      
+      <ProtectedRoute exact path="/" component={DrinkIndexContainer} />
+      <Route exact path="/drink/:drinkId" component={DrinkDetailContainer} />
       <Route path="/" component={GreetingContainer} />
     </Switch>
   </div>

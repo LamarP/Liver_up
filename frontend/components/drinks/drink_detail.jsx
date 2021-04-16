@@ -17,7 +17,7 @@ class DrinkDetail extends React.Component{
     return (
       <section className="drink-detail">
         <figure>
-          <img src={this.props.drink.imageUrl} alt={this.props.drink.drink_name} />
+          <img src={this.props.drink.img_url} alt={this.props.drink.drink_name} />
         </figure>
         <ul>
           <li><h2>{this.props.drink.drink_name}</h2></li>

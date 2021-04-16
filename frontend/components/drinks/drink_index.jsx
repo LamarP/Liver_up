@@ -1,6 +1,7 @@
 import React from 'react';
 import DrinkIndexItem from './drink_index_item';
-
+import { Route } from 'react-router-dom';
+import DrinkDetailContainer from "./drink_detail_container";
 class DrinkIndex extends React.Component{
   constructor(props){
   super(props)
@@ -12,11 +13,13 @@ class DrinkIndex extends React.Component{
   
   render() {
     const { drinks } = this.props;
-    console.log(this.props);
+    
     const drink_arr = Object.values(drinks);
     
     return (
       <div className="drink-list">
+        <section className="drink-list">
+          <Route path="/drinks/:drinkId" component={DrinkDetailContainer}/>
         <ul>
           {
              drink_arr.map((drink) => (
@@ -26,6 +29,7 @@ class DrinkIndex extends React.Component{
             ))
           }
         </ul>
+        </section>
       </div>
     )
   }
