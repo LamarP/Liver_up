@@ -13,7 +13,7 @@ class DrinkIndex extends React.Component{
   
   render() {
     const { drinks } = this.props;
-    
+    console.log(this.props);
     const drink_arr = Object.values(drinks);
     
     return (
