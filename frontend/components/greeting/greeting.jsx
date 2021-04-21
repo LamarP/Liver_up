@@ -5,22 +5,16 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
-    <div>
-      <div className="background-tint"></div>
-        <div className="background-image">
-          <img src={window.bg_image}alt="background image" />
-        
-      </div>
-      
-    <div className="login-signup">
-      <div className="buttons">
-        <Link to="/login">Sign in</Link>
-        &nbsp;&nbsp;
-        <Link to="/signup">create an account</Link>
-      </div>
-      <div className="entrance_page">
-        <div className="slogan">Discover and share your inner demons.</div>
-      </div> 
+    <div className="entrance">
+      <div className="login-signup">
+        <div className="buttons">
+          <Link to="/login">Sign in</Link>
+          &nbsp;&nbsp;
+          <Link to="/signup">create an account</Link>
+        </div>
+          <div className="background-img">
+            <img className="background-img" src={window.bg_image}alt="background image" />
+          </div>
       </div>
     </div>
   );
