@@ -1,0 +1,24 @@
+
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.login-input {
+  margin-left: 20px;
+}
+
+.login-form-box {
+  display: block;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  justify-content: space-around;
+  position: relative;
+}
+.login-form-box > ul {
+  margin-top: 20px;
+}

@@ -89,7 +89,7 @@ class SessionForm extends React.Component {
             <button onClick={this.handleDemoUser}>Secret Entrance</button>
           </div>
         </form>
-      </div>
+        </div>   
       </div>
     );
   }
