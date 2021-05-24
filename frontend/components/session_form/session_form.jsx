@@ -47,7 +47,6 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div>
-        
       <div className="login-form-container">
        
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -83,12 +82,18 @@ class SessionForm extends React.Component {
                   placeholder="Password"
                   onChange={this.update('password')}
               />
-            <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+              <br />
+              <span class="button yellow submit-btn">
+                <input className="session-submit" type="submit" value={this.props.formType} />
+              </span>
+              <br />
             <button onClick={this.handleDemoUser}>Secret Entrance</button>
+              
           </div>
         </form>
-        </div>   
+          </div>
+            
+          <div className="overlay"></div>
       </div>
     );
   }

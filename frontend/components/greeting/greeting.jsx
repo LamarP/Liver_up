@@ -18,8 +18,9 @@ const Greeting = ({ currentUser, logout }) => {
         </div>
           <div className="background-img">
             <img className="background-img" src={window.bg_image}alt="background image" />
-          </div>
+        </div>
       </div>
+        {/* <div className="overlay"></div> */}
     </div>
   );
   const personalGreeting = () => (
@@ -28,7 +29,7 @@ const Greeting = ({ currentUser, logout }) => {
       <h2 className="header-name">What up, {currentUser.username}!</h2>
       <button className="header-button" onClick={logout}>Log Out</button>
       </hgroup>
-     
+      
     </div>
   );
     

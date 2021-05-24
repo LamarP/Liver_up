@@ -25,6 +25,7 @@ class DrinkDetail extends React.Component{
           <li>{this.props.drink.base_spirit}</li>
           <li>{this.props.drink.abv}</li>
           <li>{this.props.drink.description}</li>
+          <li>{this.props.drink.average_rating || 'No reviews yet'}</li>
         </ul>
       </section>
     )
