@@ -54,9 +54,6 @@ class SessionForm extends React.Component {
             <h1>Liver_up</h1>
           </Link>
           <br />
-          <ul>
-          Please {this.props.formType} or {this.props.navLink}
-          </ul>
           {this.renderErrors()}
           <div className="login-form">
             <br/>
@@ -66,7 +63,7 @@ class SessionForm extends React.Component {
                   placeholder="Username"
                   value={this.state.username}
                   onChange={this.update('username')}
-              />
+                  />
           
             <br/>
               <input className="email"
@@ -74,22 +71,27 @@ class SessionForm extends React.Component {
                   placeholder="Email"
                   value={this.state.email}
                   onChange={this.update('email')}
-              />
+                  />
             <br/>
               <input className="password"
                   type="password"
                   value={this.state.password}
                   placeholder="Password"
                   onChange={this.update('password')}
-              />
-              <br />
-              <span class="button yellow submit-btn">
+                  />
+              <br/>
+              <span className="button yellow submit-btn">
                 <input className="session-submit" type="submit" value={this.props.formType} />
               </span>
-              <br />
-            <button onClick={this.handleDemoUser}>Secret Entrance</button>
+              <br/>
+              <button
+                className="demo-login-button"
+                onClick={this.handleDemoUser}>Secret Entrance</button>
               
           </div>
+                  <ul>
+                   {this.props.navLink}
+                  </ul>
         </form>
           </div>
             

@@ -21,7 +21,6 @@ header {
   margin-top: 5%;
   margin-right: 5%;
   display: flex;
-  
 }
 
 .header-content-container{
@@ -30,33 +29,17 @@ header {
   align-items: center;
   
 }
-h2 {
-  box-sizing: border-box;
-  color: rgb(255, 255, 255);
-  display: flex;
-  font-family: Helvetica, sans-serif;
-  font-size: 32px; 
-  font-style: normal;
-  line-height: 32px;
-  margin-top: 100px;
-  margin-block-end: 10px;
-  margin-block-start: 0px;
-  margin-bottom: 10px;
-  text-align: center;
-  justify-content: center;
-
-}
 
 .header-name {
- margin: 7px 0 0 0;
- padding: 15px 20px
+  margin: 7px 0 0 0;
+  padding: 15px 20px
 }
 
 
 .login-form-container {
- display: flex;
- justify-content: center;
- margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 
@@ -68,36 +51,57 @@ h2 {
 }
 
 .login-input {
- margin-left: 20px;
+  margin-left: 20px;
 }
 
 
 .login-form-box {
   display: block;
-  padding: 20px;
+  padding: 17px 17px;
   border-radius: 5px;
   background-color: white;
   justify-content: space-around;
   position: relative;
-  width: 300px;
+  width: 350px;
+  height: 500px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 40px;
   z-index: 101;
 }
 .login-form-box > ul {
   margin-top: 20px;
 }
-.logo {
-  color: rgb(95, 93, 93);
-  font-size: 75px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 500;
+// .logo {
+  //   color: rgb(95, 93, 93);
+  //   font-size: 75px;
+  //   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  //   font-weight: 500;
   
-}
-
-.header-link {
- text-decoration: none;
- color: rgb(37, 36, 36);
-
-}
+  // }
+  
+  .header-link {
+    text-decoration: none;
+    color: rgb(37, 36, 36);
+    display: flex;
+    font-family: Helvetica, sans-serif;
+    font-size: 32px; 
+    font-style: normal;
+    line-height: 32px;
+    margin-top: 100px;
+    margin-block-end: 10px;
+    margin-block-start: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    // position: absolute;
+    
+    box-sizing: border-box;
+  }
+  .h1 > a {
+    color: rgb(255, 255, 255);
+    z-index: 102;
+  }
 
 hr {
  border-bottom: 1px solid grey;
@@ -146,6 +150,33 @@ hr {
   // border-style: solid;
   // border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
   // border-image: initial;
+}
+
+.demo-login-button {
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  position: relative;
+  text-rendering: auto;
+  color: white;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  cursor: pointer;
+  background-color: black;
+  box-sizing: border-box;
+  margin: 5px;
+  font: 18px proximaNova, helvetica, sans-serif;
+  padding: 1px 7px;
+  border-width: 1px;
+  border-radius: 5px;
+  width: 300px;
+  height:35px;
+  border:0px transparent; 
+  // display: flex;
+  display: space-around;
 }
 
 
