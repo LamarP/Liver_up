@@ -8,19 +8,22 @@
 User.delete_all
 Drink.delete_all
 Review.delete_all
+CheckIn.delete_all
 # Bar.delete_all
 # users
 
 u1 = User.create!(
   username: 'guest',
   password: 'password',
-  email: 'guest'
+  email: 'guest',
+  id: 1
 )
 
 u2 = User.create!(
   username: 'username',
   password: 'password',
-  email: 'username'
+  email: 'username',
+  id: 2
 )
 
 # drinks
@@ -65,12 +68,18 @@ drinks = {
     abv: details["abv"],
     drink_style: details["drink_style"],
     bar_id: details["bar_id"],
-    img_url: "#{num}.png"
+    img_url: "#{num}.png",
+    id: num
   )
  end
   
   
-
+CheckIn.create!([
+  {drink_id: 4, author_id: 1, body: "slurred mumbling", rating: 4.7},
+  {drink_id: 3, author_id: 2, body: "I can't feel feelings!", rating: 3.2},
+  {drink_id: 1, author_id: 2, body: "a delicate balance of aromatics make the spirit pop!", rating: 3},
+  {drink_id: 2, author_id: 1, body: "gimme back my keys!", rating: 2.4}
+])
 
 # reviews
 

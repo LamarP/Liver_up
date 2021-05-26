@@ -5,8 +5,8 @@ class Drink < ApplicationRecord
   foreign_key: :bar_id,
   class_name: :Bar
 
-  has_many :reviews,
+  has_many :check_ins,
   foreign_key: :drink_id,
-  class_name: :Review
+  class_name: :CheckIn
 
 end

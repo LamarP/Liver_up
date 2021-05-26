@@ -5,14 +5,10 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: {minimum: 6 }, allow_nil: true
   
-  has_many :reviews,
-  foreign_key: :author_id,
-  class_name: :Review
+  has_many :check_ins, dependent: :destroy
 
-  has_many :reviewed_drinks,
-  through: :reviews,
-  source: :drinks
-
+  has_many :drinks,
+  through: :check_ins
 
   after_initialize :ensure_session_token!
 
