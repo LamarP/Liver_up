@@ -13,7 +13,6 @@ class DrinkIndex extends React.Component{
   
   render() {
     const { drinks } = this.props;
-    console.log(this.props);
     const drink_arr = Object.values(drinks);
     
     return (
@@ -25,7 +24,8 @@ class DrinkIndex extends React.Component{
              drink_arr.map((drink) => (
             <DrinkIndexItem
             key={`drink${drink.id}`}
-            drink={drink} />
+                 drink={drink} />
+               
             ))
           }
         </ul>

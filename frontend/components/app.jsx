@@ -7,7 +7,7 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
-import Splash from './splash/splash';
+// import Splash from './splash/splash';
 import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
@@ -19,15 +19,14 @@ import Modal from './modal/modal';
 const App = () => (
   <div>
     <Modal />
-    
-      
-      
-    
+    <GreetingContainer/>
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       
-      <Route path="/" component={Home} />
+      <ProtectedRoute exact path="/drinks" component={DrinkIndexContainer}/>
+      <ProtectedRoute exact path="/drink/:drinkId" component={DrinkDetailContainer} />
+      {/* <Route path="/" component={Home} /> */}
       
     </Switch>
   </div>

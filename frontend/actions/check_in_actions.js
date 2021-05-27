@@ -12,8 +12,8 @@ const receiveCheckIns = (checkIns)=>({
     checkIns
 })
 
-export const fetchCheckIns = userIds => dispatch =>(
-    CheckInAPIUtil.fetchCheckIns(userIds)
+export const fetchAllCheckIns = userIds => dispatch =>(
+    CheckInAPIUtil.fetchAllCheckIns(userIds)
     .then(checkIns => dispatch(receiveCheckIns(checkIns)))
 )
 

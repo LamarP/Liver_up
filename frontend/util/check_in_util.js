@@ -1,18 +1,18 @@
-export const fetchAllCheckins = () => {
+export const fetchAllCheckIns = () => {
   return $.ajax({
       method: "GET",
       url: "/api/check_ins"
   });
 };
 
-export const fetchCheckin = checkinId => {
+export const fetchCheckIn = checkinId => {
   return $.ajax({
       method: "GET",
       url: `/api/check_ins/${checkinId}`
   });
 };
 
-export const createCheckin = checkin => {
+export const createCheckIn = checkin => {
   return $.ajax({
       method: "POST",
       url: "/api/check_ins",
@@ -20,7 +20,7 @@ export const createCheckin = checkin => {
   });
 };
 
-export const updateCheckin = checkin => {
+export const updateCheckIn = checkin => {
   return $.ajax({
       method: "PATCH",
       url: `/api/check_ins/${checkin.id}`,
@@ -28,7 +28,7 @@ export const updateCheckin = checkin => {
   });
 };
 
-export const deleteCheckin = checkinId => {
+export const deleteCheckIn = checkinId => {
   return $.ajax({
       method: "DELETE",
       url: `/api/check_ins/${checkinId}`

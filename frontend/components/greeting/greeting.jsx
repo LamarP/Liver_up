@@ -29,7 +29,9 @@ const Greeting = ({ currentUser, logout }) => {
       <h2 className="header-name">What up, {currentUser.username}!</h2>
       <button className="header-button" onClick={logout}>Log Out</button>
       </hgroup>
-      
+      <div className="drinks-index">
+        <Link to="/drinks">Drinks</Link>
+      </div>
     </div>
   );
     
