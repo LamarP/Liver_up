@@ -1,4 +1,4 @@
-export const fetchAllCheckIns = () => {
+export const fetchCheckIns = () => {
   return $.ajax({
       method: "GET",
       url: "/api/check_ins"

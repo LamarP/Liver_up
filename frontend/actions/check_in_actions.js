@@ -1,28 +1,43 @@
 import * as CheckInAPIUtil from '../util/check_in_util'
-
-export const RECEIVE_CHECK_INS = 'RECEIVE_CHECK_INS'
-export const RECEIVE_ALL = 'RECEIVE_ALL'
+//action constants
+export const RECEIVE_CHECKINS = 'RECEIVE_CHECKINS';
+export const RECEIVE_ALL = 'RECEIVE_ALL';
+export const RECEIVE_CHECKIN = 'RECEIVE_CHECKIN';
+export const REMOVE_CHECKIN = 'REMOVE_CHECKIN';
 
 const receiveAll = (all)=>({
     type: RECEIVE_ALL,
     all
 })
 const receiveCheckIns = (checkIns)=>({
-    type: RECEIVE_CHECK_INS,
+    type: RECEIVE_CHECKINS,
     checkIns
 })
+const receiveCheckIn = checkIn => ({
+  type: RECEIVE_CHECKIN,
+  checkIn
+})
+const removeCheckIn = checkInId => ({
+  type: REMOVE_CHECKIN,
+  checkInId
+})
 
-export const fetchAllCheckIns = userIds => dispatch =>(
-    CheckInAPIUtil.fetchAllCheckIns(userIds)
+export const fetchCheckIns = () => dispatch =>(
+    CheckInAPIUtil.fetchCheckIns()
     .then(checkIns => dispatch(receiveCheckIns(checkIns)))
+)
+
+export const fetchCheckIn = checkInId => dispatch(
+  CheckInAPIUtil.fetchCheckIn(checkInId)
+  .then(checkIn => dispatch(receiveCheckIn(checkIn)))
 )
 
 export const createCheckIn = checkIn => dispatch =>(
     CheckInAPIUtil.createCheckIn(checkIn)
-    .then(all => dispatch(receiveAll(all)))
+    .then(checkIn => dispatch(receiveCheckIn(checkIn)))
 )
 
 export const deleteCheckIn = checkInId => dispatch =>(
     CheckInAPIUtil.deleteCheckIn(checkInId)
-    .then(all => dispatch(receiveAll(all)))
+    .then(() => dispatch(removeCheckIn(checkInId)))
 )

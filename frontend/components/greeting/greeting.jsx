@@ -26,7 +26,7 @@ const Greeting = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <div>
     <hgroup className="header-group">
-      <h2 className="header-name">What up, {currentUser.username}!</h2>
+      <h2 className="header-name">Liver_up</h2>
       <button className="header-button" onClick={logout}>Log Out</button>
       </hgroup>
       <div className="drinks-index">

@@ -14,7 +14,9 @@ import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import DrinkIndexContainer from './drinks/drink_index_container';
 import DrinkDetailContainer from './drinks/drink_detail_container';
-import Home from './home';
+import CheckInIndexContainer from './check_ins/checkin_index_container';
+
+// import Home from './home';
 import Modal from './modal/modal';
 const App = () => (
   <div>
@@ -26,6 +28,9 @@ const App = () => (
       
       <ProtectedRoute exact path="/drinks" component={DrinkIndexContainer}/>
       <ProtectedRoute exact path="/drink/:drinkId" component={DrinkDetailContainer} />
+      
+      {/* <ProtectedRoute exact path="/checkIns/:checkInId" component={CheckInShowContainer} /> */}
+      {/* <ProtectedRoute exact path="/checkIns/:checkInId/edit" component={EditCheckInContainer} /> */}
       {/* <Route path="/" component={Home} /> */}
       
     </Switch>
