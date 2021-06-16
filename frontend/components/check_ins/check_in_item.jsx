@@ -18,6 +18,7 @@ class CheckInIndexItem extends React.Component {
       <li className="checkin-index-item">
       {/* <Link to={`/drink/${this.props.checkIn.id}`}> */}
         <span>{this.props.checkIn.body}</span>
+        <br/>
         {/* <img src={this.props.drink.img_url}/> */}
           <span>{this.props.checkIn.rating}</span>
           <br />
