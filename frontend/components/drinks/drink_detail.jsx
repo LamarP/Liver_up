@@ -35,7 +35,7 @@ class DrinkDetail extends React.Component{
           <li>{this.props.drink.average_rating || 'No reviews yet'}</li>
         </ul>
         
-    
+    <br/>
       </section>
         <section>
        <CheckInIndexContainer/>
