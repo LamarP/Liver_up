@@ -15,12 +15,13 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import DrinkIndexContainer from './drinks/drink_index_container';
 import DrinkDetailContainer from './drinks/drink_detail_container';
 import CheckInIndexContainer from './check_ins/checkin_index_container';
-
+import NavBarContainer from './nav/navbar_container';
 // import Home from './home';
 import Modal from './modal/modal';
 const App = () => (
   <div>
     <Modal />
+    <NavBarContainer />
     <GreetingContainer/>
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
