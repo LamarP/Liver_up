@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import NavBarContainer from '../nav/navbar_container';
 
 
 const Greeting = ({ currentUser, logout }) => {
@@ -25,16 +25,18 @@ const Greeting = ({ currentUser, logout }) => {
   );
   const personalGreeting = () => (
     <div>
-    <hgroup className="header-group">
+    {/* <hgroup className="header-group">
         {/* <h2 className="header-name">Liver_up</h2> */}
-        <Link to="/" className="header-link">
-            <h1>Liver_up</h1>
-          </Link>
-      <button className="header-button" onClick={logout}>Log Out</button>
-      </hgroup>
-      <div className="drinks-index">
+        {/* <Link to="/" className="header-link"> */}
+            {/* <h1>Liver_up</h1> */}
+          {/* </Link> */}
+      {/* <button className="header-button" onClick={logout}>Log Out</button> */}
+      {/* </hgroup> */}
+      {/* <NavBarContainer /> */}
+      {/* <div className="drinks-index">
         <Link to="/drinks">Drinks</Link>
-      </div>
+        
+      </div> */}
     </div>
   );
     

@@ -1,21 +1,145 @@
-.NavBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.NavBar button {
-  height: 20px;
-}
-
-.Links1 {
-  width: 100px;
+.navbar {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: rgb(247, 108, 228);
+  color: white;
+  text-align: center;
+  height: 60px;
 }
 
-.Links2 {
-  width: 400px;
-  display: flex;
-  justify-content: space-between;
+.nav-logo {
+  font-size: 32px;
+  margin: 10px;
+  margin-left: 100px;
+  
+}
+
+
+.navbar h4 {
+  margin-left: auto;
+}
+
+.nav-button {
+ font-size: 14px;
+ padding: 2px;
+ margin: 10px;
+ margin-right: 100px;
+}
+
+.nav-button:hover {
+  color: grey;
+}
+
+.nav-pub {
+  color: white;
+  font-family: normal;
+  margin: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
+
+.nav-drinks {
+  color: white;
+  font-family: inherit;
+  margin: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.top-user-circle {
+height: 38px;
+min-width: 38px;
+font-size: 38px;
+background-color: white;
+border-radius: 18px;
+
+}
+
+.dropdown-outer {
+// float: right;
+flex-grow: 2;
+}
+
+.dropdown {
+float: right;
+width: 30px;
+}
+
+.dropdown .dropbtn {
+font-size: 16px;  
+border: none;
+outline: none;
+color: white;
+font-family: inherit;
+margin-right: 8px;
+border-radius: 16px;
+float: right;
+min-width: 38px;
+position: relative;
+padding: 7px 9px;
+}
+// .arrow-up {
+//   width: 0; 
+//   height: 0; 
+//   border-left: 5px solid transparent;
+//   border-right: 5px solid transparent;
+//   z-index: 100;
+//   border-bottom: 5px solid black;
+// }
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: grey;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+color: white;
+padding-top: 100px;
+right: 60px;
+top: 6%;
+// padding: 0 0 0 9px;
+}
+
+.dropdown-content:after { 
+  // content: '⬆';
+  // display: flex;
+  content:"";
+  position: absolute;
+  right: 4px;
+  top: -20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 17px 17px 17px;
+  border-color: transparent transparent gray transparent;
+  z-index:9998;
+
+}
+
+.dropdown-link {
+float: none;
+color: white;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+cursor: pointer;
+border-bottom: 1px solid grey;
+}
+
+.dropdown-link:hover {
+background-color: rgb(153, 146, 146);
+
+}
+
+
+.dropdown:hover .dropdown-content {
+display: block;
 }
