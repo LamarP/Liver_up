@@ -101,9 +101,10 @@ min-width: 160px;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 1;
 color: white;
-padding-top: 100px;
+padding-top: 150px;
 right: 60px;
 top: 6%;
+margin-top: 20px;
 // padding: 0 0 0 9px;
 }
 
@@ -112,8 +113,8 @@ top: 6%;
   // display: flex;
   content:"";
   position: absolute;
-  right: 4px;
-  top: -20px;
+  right: 0px;
+  top: -17.5px;
   width: 0;
   height: 0;
   border-style: solid;
