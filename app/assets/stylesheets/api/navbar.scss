@@ -1,24 +1,31 @@
 .navbar {
   font-family: 'Roboto', sans-serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background-color: rgb(247, 108, 228);
+  background-color: rgba(247, 239, 230, 0.349);
   color: white;
   text-align: center;
-  height: 60px;
+  height: 80px;
+  border-top: 12px solid rgba(23, 108, 235, 0.774);
+  border-bottom: 52px solid rgba(28, 60, 119, 0.76);
+  
+
 }
 
-.nav-logo {
+.navbar-logo {
   font-size: 32px;
   margin: 10px;
-  margin-left: 100px;
-  
+  margin-left: 10px;
+  color: black;
+  text-decoration: none;
+
 }
 
 
 .navbar h4 {
   margin-left: auto;
+  text-decoration: none;
 }
 
 .nav-button {
@@ -32,13 +39,16 @@
   color: grey;
 }
 
-.nav-pub {
+.nav-dive {
   color: white;
   font-family: normal;
   margin: 10px;
   margin-left: 20px;
   font-size: 18px;
   font-weight: 300;
+  padding: 10px;
+  text-decoration: none;
+
 }
 
 
@@ -50,6 +60,8 @@
   margin-left: 20px;
   font-size: 18px;
   font-weight: 300;
+  text-decoration: none;
+
 }
 
 .top-user-circle {

@@ -16,9 +16,9 @@ class Navbar extends React.Component {
             return(
                 <div className="navbar">
                     <Link to="/" className="navbar-logo">Liver_up</Link>
-                    <Link to="/" className="navbar-pub">The Dive</Link>
+                    <Link to="/" className="navbar-dive">The Dive</Link>
                     <Link to="/drinks" className="navbar-drinks">Drinks</Link>
-                    <div className="dropdown-outer">
+                    {/* <div className="dropdown-outer"> */}
                     {/* <div className="arrow-up"></div> */}
                         <div className="dropdown">
                             <button className="dropbtn"><Link to={`/users/${this.props.currentUser.id}`} >Dropdown</Link>
@@ -28,7 +28,7 @@ class Navbar extends React.Component {
                             <Link className="dropdown-link" to={`/users/${this.props.currentUser.id}`}>Profile</Link>
                                 <a className="dropdown-link" onClick={this.props.logout}>Logout</a>
                             </div>
-                        </div>
+                        {/* </div> */}
                     </div>
                  
                 </div>
