@@ -1,16 +1,43 @@
 .navbar {
   font-family: 'Roboto', sans-serif;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  flex-direction: row;
+  position: fixed;
   background-color: rgba(247, 239, 230, 0.349);
   color: white;
   text-align: center;
   height: 80px;
   border-top: 12px solid rgba(23, 108, 235, 0.774);
   border-bottom: 52px solid rgba(28, 60, 119, 0.76);
-  
+  width: 100%;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  z-index:1000;
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.30);
+}
 
+#nav-links {
+  display: flex;
+  width: 900px;
+  margin: 0 auto;
+  // margin-top: 1%;
+  justify-content: space-between;
+  align-items:center;
+}
+
+
+@media all and (max-width: 800px) {
+  .navbar {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-between;
+  }
+}
+@media all and (max-width: 500px) {
+  .navbar {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
 }
 
 .navbar-logo {
@@ -19,50 +46,64 @@
   margin-left: 10px;
   color: black;
   text-decoration: none;
-
+  
+}
+.logo-div {
+  float: left;
 }
 
-
-.navbar h4 {
-  margin-left: auto;
-  text-decoration: none;
-}
-
-.nav-button {
- font-size: 14px;
- padding: 2px;
- margin: 10px;
- margin-right: 100px;
-}
-
-.nav-button:hover {
-  color: grey;
-}
-
-.nav-dive {
-  color: white;
-  font-family: normal;
-  margin: 10px;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: 300;
-  padding: 10px;
-  text-decoration: none;
-
+.nav-area {
+  display: flex;
+ 
 }
 
 
 
-.nav-drinks {
-  color: white;
-  font-family: inherit;
-  margin: 10px;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: 300;
-  text-decoration: none;
+// .navbar h4 {
+//   margin-left: auto;
+//   text-decoration: none;
+// }
 
+// .nav-button {
+//  font-size: 14px;
+//  padding: 2px;
+//  margin: 10px;
+//  margin-right: 100px;
+// }
+
+// .nav-button:hover {
+//   color: grey;
+// }
+
+// .nav-dive {
+//   color: white;
+//   font-family: normal;
+//   margin: 10px;
+//   margin-left: 20px;
+//   font-size: 18px;
+//   font-weight: 300;
+//   padding: 10px;
+//   text-decoration: none;
+//   float: left;
+// }
+
+.navbar .a {
+  right: auto;
 }
+
+// .navbar .nav-drinks {
+//   color: white;
+//   font-family: inherit;
+//   margin: 10px;
+//   font-size: 18px;
+//   font-weight: 300;
+//   text-decoration: none;
+//   float: left;
+//   display: block;
+//   padding: 8px;
+//   right: -5px;
+// }
+
 
 .top-user-circle {
 height: 38px;
@@ -91,32 +132,25 @@ color: white;
 font-family: inherit;
 margin-right: 8px;
 border-radius: 16px;
-float: right;
 min-width: 38px;
-position: relative;
+// position: absolute;
 padding: 7px 9px;
+right: 0px;
 }
-// .arrow-up {
-//   width: 0; 
-//   height: 0; 
-//   border-left: 5px solid transparent;
-//   border-right: 5px solid transparent;
-//   z-index: 100;
-//   border-bottom: 5px solid black;
-// }
+
 
 .dropdown-content {
 display: none;
-position: absolute;
+position: fixed;
 background-color: grey;
 min-width: 160px;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 1;
 color: white;
+right: 15%;
+top: 8%;
+margin-top: 2%;
 padding-top: 150px;
-right: 60px;
-top: 6%;
-margin-top: 20px;
 // padding: 0 0 0 9px;
 }
 
@@ -126,7 +160,7 @@ margin-top: 20px;
   content:"";
   position: absolute;
   right: 0px;
-  top: -17.5px;
+  top: -10.5px;
   width: 0;
   height: 0;
   border-style: solid;

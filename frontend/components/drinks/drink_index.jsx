@@ -16,6 +16,7 @@ class DrinkIndex extends React.Component{
     const drink_arr = Object.values(drinks);
     
     return (
+      <div className="drinks">
       <div className="drink-list">
         <section className="drink-list">
           <Route path="/drinks/:drinkId" component={DrinkDetailContainer}/>
@@ -30,6 +31,8 @@ class DrinkIndex extends React.Component{
           }
         </ul>
         </section>
+      </div>
+
       </div>
     )
   }
