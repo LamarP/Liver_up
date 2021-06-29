@@ -18,8 +18,8 @@ class DrinkIndex extends React.Component{
     return (
       <div className="drinks">
         
-          <div className="drink-index-box">
-        <section className="drink-list">
+        
+        
           <Route path="/drinks/:drinkId" component={DrinkDetailContainer}/>
         <ul>
           {
@@ -31,8 +31,8 @@ class DrinkIndex extends React.Component{
             ))
           }
         </ul>
-        </section>
-          </div>
+        
+          
       </div>
     )
   }

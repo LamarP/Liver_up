@@ -1,91 +1,120 @@
 .drinks {
 
-  display: flex;
+  // display: inline-block;
   padding: 17px 17px;
   flex-grow: 1;
-  border-radius: 5px;
-  background-color: rgb(241, 241, 214);
-  justify-content: space-around;
-  position: relative;
-  box-shadow: 2px 3px 8px 0px rgba(0,0,0,0.30);
+  border-top: 1px solid gray;
+  background-color: white;
   width: 70%;
   height: 500px;
   margin: auto;
   margin-top: 50px;
-  margin-bottom: 40px;
   overflow: auto;
-  z-index: 101;
+  overflow: hidden;
+  margin-bottom: 40px;
+  margin-right: 12%;
+  margin-left: 12%;
+  margin-top: 80px;
+  padding-bottom: 100px;
+  display: flex;
 }
 
 
-/* Create three equal columns that floats next to each other */
+
 .drink-index-item{
-justify-content: space-around;
-  width: 33.33%;
-  padding: 15px;
-  margin-top: 20px;
-}
-
-.drink-index-item .ul .li {
+    padding: 17px 17px;
+    // flex-grow: 1;
+    // border-radius: 5px;
+    // // background-color: rgb(252, 252, 249);
+    // height: 200px;
+    // width: 500px;
+    // // background-color: powderblue;
+    // // height: 500px;
+    // margin: auto;
+    // margin-top: 50px;
+    // overflow: auto;
+    // margin-bottom: 40px;
+    // margin-right: 12%;
+    // margin-left: 12%;
+    // // margin-top: 80px;
+    // display: flex;
+    // // flex-direction: column;
+    // // justify-content: center;
+    // align-items: center;
+    // align-content: center;
+    
+  }
   
-}
-.drink-name {
-  // font-family:monospace;
-  text-decoration: none;
-  color: rgb(44, 43, 43);
-  font-size: 35px;
+  
+  
+  .drink-name {
+    font-family:monospace;
+    text-decoration: none;
+    
+    color: rgb(44, 43, 43);
+    font-size: 25px;
+    //   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 540;
+    display: flex;
+    font-style: normal;
+    //   line-height: 32px;
+    //   margin-top: 50px;
+    //   margin-block-end: 10px;
+    //   margin-block-start: 0px;
+    //   margin-bottom: 10px;
+    //   text-align: center;
+    //   justify-content: space-around;
+    //   position: absolute;
+    //   padding-top: 10px;
+    //   box-sizing: border-box;
+  }
+  a:link {
+    text-decoration: none;
+  }
+  
+  .drink-style {
+    padding-bottom: 100px;
+    text-decoration: none;
+  color: lightgrey;
+  font-size: 17px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 540;
+  font-weight: 240;
   display: flex;
   font-style: normal;
   line-height: 32px;
-  margin-top: 150px;
+  // margin-top: 50px;
   margin-block-end: 10px;
   margin-block-start: 0px;
   margin-bottom: 10px;
-  text-align: center;
-  justify-content: center;
-  position: absolute;
-
-  box-sizing: border-box;
+  // text-align: center;
+  // justify-content: space-around;
+  // position: absolute;
+  // padding-top: 10px;
+  padding-bottom: 10px;
+  // box-sizing: border-box;
 }
+// /* Clear floats after the columns */
+// // .row:after {
+// //   content: "";
+// //   display: table;
+// //   clear: both;
+// // }
 
-.drink-style {
-  text-decoration: none;
-  color: rgb(44, 43, 43);
-  font-size: 25px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 540;
-  display: flex;
-  font-style: normal;
-  line-height: 32px;
-  margin-top: 50px;
-  margin-block-end: 10px;
-  margin-block-start: 0px;
-  margin-bottom: 10px;
-  text-align: center;
-  justify-content: space-around;
-  position: absolute;
-  padding-top: 10px;
-  box-sizing: border-box;
-}
-/* Clear floats after the columns */
-// .row:after {
-//   content: "";
-//   display: table;
-//   clear: both;
+// .drink-index-box {
+//   padding: 17px 17px;
+//   justify-content: space-around;
+//   position: relative;
+//   width: 100%;
+//   height: 500px;
+//   margin: auto;
+//   margin-top: 50px;
+//   margin-bottom: 40px;
+//   z-index: 101;
+//   flex-grow: 1;
+ 
 // }
 
-.drink-index-box {
-  padding: 17px 17px;
-  justify-content: space-around;
-  position: relative;
-  width: 100%;
-  height: 500px;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 40px;
-  z-index: 101;
-  flex-grow: 1;
- 
-}
+// .drink-index-item .ul .li {
+//   text-decoration: none;
+//   color: red;
+// }
