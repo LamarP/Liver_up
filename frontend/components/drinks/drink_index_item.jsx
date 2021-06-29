@@ -5,11 +5,13 @@ class DrinkIndexItem extends React.Component{
   constructor(props){
     super(props);
   }
-
- 
-
+  
+  
   render(){
-    return(
+    var Rating = require('react-rating');
+    return (
+      <div>
+        <ul>
       <li className="drink-index-item">
         <Link to={`/drink/${this.props.drink.id}`}>
           {/* <img src={this.props.drink.img_url}/> */}
@@ -17,11 +19,21 @@ class DrinkIndexItem extends React.Component{
           <span className="drink-name">{this.props.drink.drink_name}</span>
         </Link>
           
-          <br />
+          
           <span className="drink-style">{this.props.drink.drink_style} - {this.props.drink.base_spirit} based </span>
-          <br />
-          <span className="drink-description">{this.props.drink.description}</span>
-      </li>
+        
+        <span className="drink-description">{this.props.drink.description}</span>
+        
+        </li>
+
+        </ul>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+      </div>
     )
   }
 }

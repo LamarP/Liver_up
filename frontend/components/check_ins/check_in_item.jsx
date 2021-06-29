@@ -20,6 +20,7 @@ class CheckInIndexItem extends React.Component {
         <span>{this.props.checkIn.body}</span>
         <br/>
         {/* <img src={this.props.drink.img_url}/> */}
+    
           <span>{this.props.checkIn.rating}</span>
           <br />
         <span>{this.props.checkIn.user}</span>

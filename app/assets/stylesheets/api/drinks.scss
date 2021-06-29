@@ -73,25 +73,26 @@
   }
   
   .drink-style {
-    padding-bottom: 100px;
-    text-decoration: none;
-  color: lightgrey;
+  padding-bottom: 100px;
+  text-decoration: none;
+  color: rgb(83, 82, 82);
   font-size: 17px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 240;
   display: flex;
   font-style: normal;
   line-height: 32px;
-  // margin-top: 50px;
   margin-block-end: 10px;
   margin-block-start: 0px;
   margin-bottom: 10px;
-  // text-align: center;
-  // justify-content: space-around;
-  // position: absolute;
-  // padding-top: 10px;
   padding-bottom: 10px;
-  // box-sizing: border-box;
+  
+}
+
+.drink-description {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  font-size: 15px;
 }
 // /* Clear floats after the columns */
 // // .row:after {
