@@ -21,6 +21,8 @@ class DrinkDetail extends React.Component{
   render() {
     if (!this.props.drink) return null;
     return (
+      <div className="main" style={{ minHeight: "1022px" }}>
+
       <div className="box-drink-page">
 
 <div className="content">
@@ -55,9 +57,19 @@ class DrinkDetail extends React.Component{
             </p>
           </div>
           <div className="details">
-            <p className="abv">{this.props.drink.abv} ABV</p>
-            <p>{this.props.drink.average_rating || 'No reviews yet'}</p>
-            <p>2,788 Ratings</p>
+                <p className="abv">{this.props.drink.abv} ABV</p>
+                <p className="ibu">12 ibu</p>
+                {/* <p>{this.props.drink.average_rating || 'No reviews yet'}</p> */}
+               
+                <div class="caps" data-rating="3.47423">
+                <div class="cap-100"></div>
+                <div class="cap-100"></div>
+                <div class="cap-100"></div>
+                <div class="cap-50"></div>
+                <div class="cap"></div>
+                </div>
+                <span class="num">(3.47)</span>
+                <p class="ratings">2,788 Ratings </p>
           </div>
           <div className="bottom">
             <div className="actions">
@@ -73,6 +85,7 @@ class DrinkDetail extends React.Component{
           </div>
       </div>
     </div>
+      </div>
     
     
     

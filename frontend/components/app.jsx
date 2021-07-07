@@ -18,10 +18,17 @@ import CheckInIndexContainer from './check_ins/checkin_index_container';
 import NavBarContainer from './nav/navbar_container';
 // import Home from './home';
 import Modal from './modal/modal';
-
-
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+library.add(fas, fab);
 const App = () => (
   <div>
+        <div>
+      <FontAwesomeIcon icon="home" />
+      <FontAwesomeIcon icon={['fab', 'google']} />
+    </div>
     <Modal />
     <NavBarContainer />
     <div>
