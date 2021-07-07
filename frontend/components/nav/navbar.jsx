@@ -22,12 +22,19 @@ class Navbar extends React.Component {
                     <Link to="/" className="navbar-dive">The Dive</Link>
                     <Link to="/drinks" className="navbar-drinks">Drinks</Link>
                     <div className="dropdown">
-                            <button className="dropbtn"><Link to={`/users/${this.props.currentUser.id}`}>Menu</Link>
+                            <button className="dropbtn"><Link to={`/users/${this.props.currentUser.id}`}>&#9860;</Link>
                     </button>
-                            <div></div>
-                            <div className="dropdown-content">
+                            
+                    <div className="dropdown-content">
+                      <ul>
+                        <li>
                             <Link className="dropdown-link" to={`/users/${this.props.currentUser.id}`}>Profile</Link>
+                        </li>
+                        <li>
                                 <a className="dropdown-link" onClick={this.props.logout}>Logout</a>
+                        </li>
+
+                      </ul>
                             </div>
                   
                 </div>
