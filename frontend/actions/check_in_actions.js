@@ -34,9 +34,9 @@ export const fetchCheckIn = checkInId => dispatch(
 )
 
 
-export const createCheckIn = checkIn => dispatch =>(
-    CheckInAPIUtil.createCheckIn(checkIn)
-    .then(checkIn => dispatch(receiveCheckIn(checkIn)))
+export const createCheckIn = checkin => dispatch =>(
+    CheckInAPIUtil.createCheckIn(checkin)
+    .then(checkin => dispatch(receiveCheckIn(checkin)))
 )
 
 export const deleteCheckIn = checkInId => dispatch =>(

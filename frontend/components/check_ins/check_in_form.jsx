@@ -8,7 +8,7 @@ class CheckInForm extends React.Component {
       rating: 5,
       body: '',
       drink_id: this.props.drinkId,
-      user_id: this.props.userId
+      author_id: this.props.authorId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -23,7 +23,9 @@ class CheckInForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const drinkId = parseInt(this.props.match.params.drinkId);
+    const drinkId = parseInt(this.props.location.pathname.split('/')[2]);
+    console.log(drinkId);
+
     const checkIn = Object.assign({}, this.state, {
       drink_id: drinkId
     });

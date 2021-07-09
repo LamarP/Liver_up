@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { createCheckIn } from '../../actions/check_in_actions';
@@ -8,10 +8,9 @@ import {closeModal} from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    userId: state.session.id,
-    // drinkId: ownProps.drinkId,
-    drink: state.entities.drinks[ownProps.match.params.drinkId],
-
+    authorId: state.session.id,
+    drinkId: ownProps.drinkId,
+    // drink: state.entities.drinks[ownProps.match.params.drinkId],
     errors: state.errors.checkin
   }
 };
