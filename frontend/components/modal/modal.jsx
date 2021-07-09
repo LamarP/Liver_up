@@ -3,13 +3,16 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
-
+import CheckInFormContainer from '../check_ins/check_in_form_container'
 function Modal({modal, closeModal}) {
   if (!modal) {
     return null;
   }
   let component;
-  switch (modal) {
+  switch (modal[0]) {
+    case 'checkin':
+      component = <CheckInFormContainer drinkId={modal[1]} />;
+      break;
     case 'login':
       component = <LoginFormContainer />;
       break;

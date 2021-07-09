@@ -25,10 +25,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(fas, fab);
 const App = () => (
   <div>
-        <div>
-      <FontAwesomeIcon icon="home" />
-      <FontAwesomeIcon icon={['fab', 'google']} />
-    </div>
+      
     <Modal />
     <NavBarContainer />
     <div>

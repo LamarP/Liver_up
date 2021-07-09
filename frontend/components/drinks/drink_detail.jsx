@@ -20,8 +20,9 @@ class DrinkDetail extends React.Component{
 
   render() {
     if (!this.props.drink) return null;
+    const drinkId = this.props.drinkId;
     return (
-      <div className="main" style={{ minHeight: "1022px" }}>
+      <div className="main">
 
       <div className="box-drink-page">
 
@@ -30,7 +31,7 @@ class DrinkDetail extends React.Component{
     <div className="top">
           <div className="basic">
             <a className="label">
-                <img className="drink-image" src={this.props.drink.img_url} alt={this.props.drink.drink_nam} width='30%' height="auto" />
+                <img className="drink-image" src={this.props.drink.img_url} alt={this.props.drink.drink_name} width='30%' height="auto" />
             </a>
             <div className="name">
                     <h1>{this.props.drink.drink_name}</h1>
@@ -61,20 +62,25 @@ class DrinkDetail extends React.Component{
                 <p className="ibu">12 ibu</p>
                 {/* <p>{this.props.drink.average_rating || 'No reviews yet'}</p> */}
                
-                <div class="caps" data-rating="3.47423">
-                <div class="cap-100"></div>
-                <div class="cap-100"></div>
-                <div class="cap-100"></div>
-                <div class="cap-50"></div>
-                <div class="cap"></div>
+                <div className="caps" data-rating="3.47423">
+                <div className="cap-100"></div>
+                <div className="cap-100"></div>
+                <div className="cap-100"></div>
+                <div className="cap-50"></div>
+                <div className="cap"></div>
                 </div>
-                <span class="num">(3.47)</span>
-                <p class="ratings">2,788 Ratings </p>
+                <span className="num">(3.47)</span>
+                <p className="ratings">2,788 Ratings </p>
           </div>
           <div className="bottom">
-            <div className="actions">
-            <a>CHECK</a>
-            <a>ADD</a>
+                <div className="actions">
+                <button onClick={() => this.props.openModal({ modal: 'checkin', drinkId: drinkId})} className="drink-checkin-btn">
+                  <div id="checkin-tag" className="checkin-tag hidden">
+                    <div id="checkin-tag-tri"></div>
+                    <div id="checkin-tag-txt">Check-in this Drink</div>
+                  </div>
+                </button>
+
             </div>
             <div className="desc">
               <p>
@@ -86,13 +92,6 @@ class DrinkDetail extends React.Component{
       </div>
     </div>
       </div>
-    
-    
-    
-
-<div className="checkin-form">
-  <CheckInFormContainer />
-</div>
 <section>
 <CheckInIndexContainer/>
 </section>
