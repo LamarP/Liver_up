@@ -16,7 +16,7 @@ export const createCheckIn = checkin => {
   return $.ajax({
       method: "POST",
       url: "/api/check_ins",
-      data: {checkin},
+    data: { checkin }
   });
 };
 

@@ -1,5 +1,5 @@
-import { RECEIVE_ALL_DRINKS } from '../actions/drink_actions';
-import { RECEIVE_DRINK } from '../actions/drink_actions';
+import { RECEIVE_ALL_DRINKS, RECEIVE_DRINK } from '../actions/drink_actions';
+
 const drinksReducer = (state = {}, action) => {
   Object.freeze(state);
   const nextState = Object.assign({}, state);

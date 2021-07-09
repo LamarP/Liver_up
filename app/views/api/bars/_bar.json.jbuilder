@@ -1,0 +1,1 @@
+json.extract! bar, :id, :name, :style, :location

@@ -7,4 +7,6 @@ class Bar < ApplicationRecord
   foreign_key: :bar_id,
   class_name: :Drink
 
+  has_many :check_ins,
+  through: :drinks
 end

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create, :show, :index, :destroy, :update]
     resources :drinks, only: [:show, :index]
     resources :check_ins, only: [:index, :create, :show, :update, :destroy]
+    resources :bars, only: [:index, :create, :show]
   end
 
   root "static_pages#root"

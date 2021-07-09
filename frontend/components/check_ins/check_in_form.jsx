@@ -6,16 +6,20 @@ class CheckInForm extends React.Component {
     super(props);
     this.state = {
       rating: 5,
-      body: ''
+      body: '',
+      drink_id: this.props.drinkId,
+      user_id: this.props.userId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.navigateToDrinkShow = this.navigateToDrinkShow.bind(this);
   }
 
-  navigateToDrinkShow() {
-    const url = `/drinks/${this.props.match.params.drinkId}`
-    this.props.history.push(url);
+
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
   }
+ 
 
   handleSubmit(e) {
     e.preventDefault();
@@ -24,7 +28,9 @@ class CheckInForm extends React.Component {
       drink_id: drinkId
     });
     this.props.createCheckIn(checkIn);
-    this.navigateToDrinkShow();
+    this.props.closeModal();
+    this.props.history.push('/home');
+    // this.navigateToDrinkShow();
   }
 
   update(property) {
@@ -56,7 +62,7 @@ class CheckInForm extends React.Component {
           <br/>
           <input type="submit" />
         </form>
-        <button onClick={this.navigateToDrinkShow}>Cancel</button>
+        <button onClick={this.props.closeModal}>Cancel</button>
       </div>
     );
  }

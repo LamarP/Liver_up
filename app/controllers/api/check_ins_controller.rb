@@ -8,13 +8,12 @@ class Api::CheckInsController < ApplicationController
   end
 
   def show
-    @checkin = CheckIn.find(params[:id])
-    
+    @checkin = CheckIn.find(id: params[:id])
     render :show
   end
 
   def destroy
-    @checkin = CheckIn.find(params[:id])
+    @checkin = CheckIn.find(id: params[:id])
     if @checkin
       @checkin.destroy
       render :show
@@ -26,6 +25,8 @@ class Api::CheckInsController < ApplicationController
   def create
     @checkin = CheckIn.new(checkin_params)
     if @checkin.save
+      # @drink = Drink.find(@checkin.drink_id)
+      # @user = User.find(@checkin.author_id)
       render :show
     else
       render json: @checkin.errors.messages, status: 422
