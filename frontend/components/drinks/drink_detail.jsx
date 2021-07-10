@@ -1,5 +1,6 @@
 import React from 'react';
 // import { Link, Route } from 'react-router-dom';
+
 import CheckInFormContainer from '../check_ins/check_in_form_container';
 import CheckInIndexContainer from '../check_ins/checkin_index_container';
 class DrinkDetail extends React.Component{
@@ -22,6 +23,9 @@ class DrinkDetail extends React.Component{
     if (!this.props.drink) return null;
     const drinkId = this.props.drinkId;
     return (
+      <div id="slide">
+        <div className="cont-drink-page">
+
       <div className="main">
 
       <div className="box-drink-page">
@@ -77,7 +81,8 @@ class DrinkDetail extends React.Component{
                 <button onClick={() => this.props.openModal({ modal: 'checkin', drinkId: drinkId})} className="drink-checkin-btn">
                   <div id="checkin-tag" className="checkin-tag hidden">
                     <div id="checkin-tag-tri"></div>
-                    <div id="checkin-tag-txt">Check-in this Drink</div>
+                      <div id="checkin-tag-txt">Check-in this Drink</div>
+                      <div class="checkmark"><div className="check-mark"></div></div>
                   </div>
                 </button>
 
@@ -91,11 +96,21 @@ class DrinkDetail extends React.Component{
           </div>
       </div>
     </div>
+          </div>
+          <div className="box-activity">
+            <div className="box-content">
+              <div className="filters">
+                <span>Sort by:</span>
+                <span className="current">Global</span>
+                <span><a>Friends</a></span>
+                <span><a>You</a></span>
+              </div>
+                <h3>Global Recent Activity</h3>
+              <CheckInIndexContainer />
+        </div>
       </div>
-<section>
-<CheckInIndexContainer/>
-</section>
-
+    </div>
+  </div>
 </div>
      
     )
