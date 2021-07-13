@@ -39,8 +39,8 @@ const App = () => (
       <ProtectedRoute exact path="/drinks" component={DrinkIndexContainer}/>
       <ProtectedRoute exact path="/drink/:drinkId" component={DrinkDetailContainer} />
       
-      {/* <ProtectedRoute exact path="/checkIns/:checkInId" component={CheckInShowContainer} /> */}
-      {/* <ProtectedRoute exact path="/checkIns/:checkInId/edit" component={EditCheckInContainer} /> */}
+      {/* <ProtectedRoute exact path="/checkIns/:checkInId" component={CheckInShowContainer} /> 
+       <ProtectedRoute exact path="/checkIns/:checkInId/edit" component={EditCheckInContainer} /> */}
       {/* <Route path="/" component={Home} /> */}
       
     </Switch>

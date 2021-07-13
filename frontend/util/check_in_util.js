@@ -31,9 +31,9 @@ export const createCheckIn = checkin => {
 //   });
 // };
 
-// export const deleteCheckIn = checkinId => {
-//   return $.ajax({
-//       method: "DELETE",
-//       url: `/api/check_ins/${checkinId}`
-//   });
-// };
+export const deleteCheckIn = checkinId => {
+  return $.ajax({
+      method: "DELETE",
+      url: `/api/check_ins/${checkinId}`
+  });
+};

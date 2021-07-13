@@ -5,67 +5,36 @@ import { Link } from 'react-router-dom';
 //   <li>
 //     <Link to={`/checkIns/${props.checkIn.id}`}></Link>
 //     <Link to={`/checkIns/${props.checkIn.id}/edit`}>Edit</Link>
-//     <button onClick={() => props.deleteCheckIn(checkIns.checkIn.id)}>Delete</button>
+//     {console.log(props)}
+//     <button onClick={() => props.deleteCheckIn(checkins.checkin.id)}>Delete</button>
 //   </li>
 // );
 class CheckInIndexItem extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-  componentDidMount() {
-    this.props.fetchCheckIn(this.props.match.params.checkInId)
+  constructor(props) {
+    super(props);
+
   }
-  
-  componentDidUpdate(prevProps) {
-    if (prevProps.match.params.checkInId !== this.props.match.params.checkInId) {
-      this.props.fetchCheckIn(this.props.match.params.checkInId)
-    }
-  }
+
   render() {
-    if (!this.props.checkIn) return null;
-    const checkIn = this.props.checkInId;
+
+    // if (!this.props.checkin) return null;
+    // const checkIn = this.props.drink.checkIn;
+    // const { checkins } = this.props;
+    const checkIns = this.props.checkIns
     return (
-      <div className="checkin">
-      <div className="checkin-top">
+ 
 
 
 
-      <p className="checkin-text">
-        <a></a>
-      </p>
-      <div className="checkin-comment">
-      <div className="rating-serving">
-      <p className="serving">
-
-      <span>Bottle</span>
-      </p>
-      <div className="caps " data-rating="2.75">
-      <div className="cap cap-100"></div>
-      <div className="cap cap-100"></div>
-      <div className="cap cap-75"></div>
-      <div className="cap"></div>
-      <div className="cap"></div>
-      </div> </div>
-      <span style="display: block; clear: both;"></span>
+      <div>
+        <div className="checkin-author">{this.props.checkIn.author_id}</div>
+        {/* <div className="checkin-author">{this.props.users[this.props.checkIn.author_id].username}</div> */}
+        <div className="checkin-body">{this.props.checkIn.body}</div>
+        <div className="checkin-rating">{this.props.checkIn.rating}</div>
       </div>
-      </div>
-      <div className="feedback">
-      <div className="actions_bar">
-      </div>
-      <div className="bottom">
+   
 
 
-      </div>
-      <div className="cheers" style="display: none;"> <span className="count"><span>0</span></span>
-      <span className="toast-list"></span>
-      </div>
-      <div className="comments">
-      <div className="comments-container">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
     )
   }
 }

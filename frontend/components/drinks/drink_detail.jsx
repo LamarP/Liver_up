@@ -3,11 +3,12 @@ import React from 'react';
 
 import CheckInFormContainer from '../check_ins/check_in_form_container';
 import CheckInIndexContainer from '../check_ins/checkin_index_container';
+import CheckInIndexItem from '../check_ins/check_in_item';
 class DrinkDetail extends React.Component{
-
+  
   componentDidMount() {
     this.props.fetchDrink(this.props.match.params.drinkId)
-    this.props.fetchCheckIns(this.props.match.params.checkInId)
+    this.props.fetchCheckIns()
   }
   
   componentDidUpdate(prevProps) {
@@ -19,9 +20,15 @@ class DrinkDetail extends React.Component{
     }
   }
 
+  
+
   render() {
     if (!this.props.drink) return null;
-    const drinkId = this.props.drinkId;
+    const drinkId = parseInt(this.props.match.params.drinkId);
+    // const checkIns = this.props.checkIns;
+    const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === drinkId);
+    // const checkIn_arr = Object.values(checkIns);
+    // debugger
     return (
       <div id="slide">
         <div className="cont-drink-page">
@@ -82,7 +89,7 @@ class DrinkDetail extends React.Component{
                   <div id="checkin-tag" className="checkin-tag hidden">
                     <div id="checkin-tag-tri"></div>
                       <div id="checkin-tag-txt">Check-in this Drink</div>
-                      <div class="checkmark"><div className="check-mark"></div></div>
+                      <div className="checkmark"><div className="check-mark"></div></div>
                   </div>
                 </button>
 
@@ -106,7 +113,17 @@ class DrinkDetail extends React.Component{
                 <span><a>You</a></span>
               </div>
                 <h3>Global Recent Activity</h3>
-              <CheckInIndexContainer />
+              <div className="checkins">    <ul>
+          {
+             checkIn_arr.map((checkIn) => (
+            <CheckInIndexItem
+            key={`checkIn${checkIn.id}`}
+                 checkIn={checkIn} />
+               
+            ))
+          }
+                </ul>
+                </div>
         </div>
       </div>
     </div>

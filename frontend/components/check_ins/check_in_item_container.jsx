@@ -24,8 +24,8 @@ import { openModal } from '../../actions/modal_actions';
 const mapStateToProps = (state, ownProps) => {
  
   return {
-    checkin: state.entities.checkins[ownProps.match.params.checkinId]
-    
+    checkin: state.entities.checkins[ownProps.match.params.checkinId],
+    users: state.entities.users
   }
 }
 

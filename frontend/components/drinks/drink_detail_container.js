@@ -4,10 +4,10 @@ import { fetchCheckIns } from './../../actions/check_in_actions';
 import DrinkDetail from "./drink_detail";
 import { openModal } from '../../actions/modal_actions';
 const mapStateToProps = (state, ownProps) => {
- 
+  
   return {
-    drink: state.entities.drinks[ownProps.match.params.drinkId]
-    
+    drink: state.entities.drinks[ownProps.match.params.drinkId],
+    checkIns: state.entities.checkIns
   }
 }
 
