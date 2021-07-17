@@ -28,7 +28,7 @@ class CheckInIndexItem extends React.Component {
 
       <div>
         <div className="checkin-author">{this.props.checkIn.author_id}</div>
-        {/* <div className="checkin-author">{this.props.users[this.props.checkIn.author_id].username}</div> */}
+        <div className="checkin-author">{this.props.users[this.props.checkIn.author_id].username}</div>
         <div className="checkin-body">{this.props.checkIn.body}</div>
         <div className="checkin-rating">{this.props.checkIn.rating}</div>
       </div>

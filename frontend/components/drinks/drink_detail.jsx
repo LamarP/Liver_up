@@ -3,7 +3,8 @@ import React from 'react';
 
 import CheckInFormContainer from '../check_ins/check_in_form_container';
 import CheckInIndexContainer from '../check_ins/checkin_index_container';
-import CheckInIndexItem from '../check_ins/check_in_item';
+// import CheckInIndexItem from '../check_ins/check_in_item';
+import CheckIn from '../check_ins/check_in_item_container';
 class DrinkDetail extends React.Component{
   
   componentDidMount() {
@@ -116,7 +117,7 @@ class DrinkDetail extends React.Component{
               <div className="checkins">    <ul>
           {
              checkIn_arr.map((checkIn) => (
-            <CheckInIndexItem
+            <CheckIn
             key={`checkIn${checkIn.id}`}
                  checkIn={checkIn} />
                
