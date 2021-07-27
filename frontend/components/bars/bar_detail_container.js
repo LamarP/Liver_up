@@ -1,12 +1,15 @@
 import { connect } from 'react-redux';
-import { fetchDrink } from './../../actions/drink_actions';
+import { fetchBar, fetchAllBars } from './../../actions/bar_actions';
+import { fetchDrink, fetchDrinks } from './../../actions/drink_actions';
 import { fetchCheckIns, fetchCheckIn, deleteCheckIn } from './../../actions/check_in_actions';
-import DrinkDetail from "./drink_detail";
+import BarDetail from "./bar_detail";
 import { openModal } from '../../actions/modal_actions';
 const mapStateToProps = (state, ownProps) => {
   
   return {
+
     drink: state.entities.drinks[ownProps.match.params.drinkId],
+    bar: state.entities.bars[ownProps.match.params.barId],
     checkIns: state.entities.checkIns
   }
 }
@@ -14,6 +17,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchDrink: (drinkId) => dispatch(fetchDrink(drinkId)),
+    fetchDrinks: (drinks) => dispatch(fetchDrinks(drinks)),
+    fetchAllBars: () => dispatch(fetchAllBars()),
+    fetchBar: (barId) => dispatch(fetchBar),
     openModal: modal => dispatch(openModal(modal)),
     fetchCheckIns: () => dispatch(fetchCheckIns()),
     fetchCheckIn: (checkInId) => dispatch(fetchCheckIn(checkInId)),
@@ -21,4 +27,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DrinkDetail);
+export default connect(mapStateToProps, mapDispatchToProps)(BarDetail);

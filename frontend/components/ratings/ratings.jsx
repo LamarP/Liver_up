@@ -33,8 +33,7 @@ function RatingIcon(props) {
   )
 }
 
-// They don't necessarily need to take props
-// This one also has an explicit return
+
 const Rating = () => {
   const [rating, setRating] = React.useState(0);
   const [hoverRating, setHoverRating] = React.useState(0);

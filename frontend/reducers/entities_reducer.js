@@ -3,9 +3,11 @@ import usersReducer from './users_reducer';
 import drinksReducer from './drinks_reducer';
 import checkInsReducer from './checkIns_reducer';
 import barsReducer from './bars_reducer';
+import profileReducer from './profile_reducer';
 export default combineReducers({
   users: usersReducer,
   drinks: drinksReducer,
   checkIns: checkInsReducer,
-  bars: barsReducer
+  bars: barsReducer,
+  profile: profileReducer
 });

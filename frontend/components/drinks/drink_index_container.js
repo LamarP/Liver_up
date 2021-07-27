@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import DrinkIndex from './drink_index';
 import { fetchAllDrinks } from '../../actions/drink_actions';
-import { selectAllDrinks } from '../../reducers/selectors';
+
 
 const mapStateToProps = state => ({
   drinks: state.entities.drinks

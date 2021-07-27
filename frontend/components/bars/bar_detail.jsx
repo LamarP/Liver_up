@@ -5,18 +5,18 @@ import CheckInFormContainer from '../check_ins/check_in_form_container';
 import CheckInIndexContainer from '../check_ins/checkin_index_container';
 import CheckInIndexItem from '../check_ins/check_in_item';
 import CheckIn from '../check_ins/check_in_item_container';
-class DrinkDetail extends React.Component{
+class BarDetail extends React.Component{
   constructor(props) {
     super(props);
   }
   componentDidMount() {
-    this.props.fetchDrink(this.props.match.params.drinkId)
+    this.props.fetchBar(this.props.match.params.barId)
     this.props.fetchCheckIns()
   }
   
   componentDidUpdate(prevProps) {
-    if (prevProps.match.params.drinkId !== this.props.match.params.drinkId) {
-      this.props.fetchDrink(this.props.match.params.drinkId)
+    if (prevProps.match.params.barId !== this.props.match.params.barId) {
+      this.props.fetchBar(this.props.match.params.barId)
     }
     if (prevProps.match.params.checkInId !== this.props.match.params.checkInId) {
       this.props.fetchCheckIn(this.props.match.params.checkInId)
@@ -26,32 +26,32 @@ class DrinkDetail extends React.Component{
   
 
   render() {
-    if (!this.props.drink) return null;
-    const drink = this.props.drink;
-    const drinkId = parseInt(this.props.match.params.drinkId);
+    if (!this.props.bar) return null;
+    const bar = this.props.bar;
+    const barId = parseInt(this.props.match.params.barId);
     // const checkIns = this.props.checkIns;
-    const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === drinkId);
+    const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === barId);
     // const checkIn_arr = Object.values(checkIns);
     // debugger
     return (
       <div id="slide">
-        <div className="cont-drink-page">
+        <div className="cont-bar-page">
 
       <div className="main">
 
-      <div className="box-drink-page">
+      <div className="box-bar-page">
 
 <div className="content">
 
     <div className="top">
           <div className="basic">
             <a className="label">
-                <img className="drink-image" src={this.props.drink.img_url} alt={this.props.drink.drink_name} width='30%' height="auto" />
+                <img className="bar-image" src={this.props.bar.img_url} alt={this.props.bar.drink_name} width='30%' height="auto" />
             </a>
             <div className="name">
-                    <h1>{this.props.drink.drink_name}</h1>
+                    <h1>{this.props.bar.drink_name}</h1>
                     <p className="bar-name">placeholder</p>
-                    <p className="drink-type-show">{this.props.drink.drink_style}</p>  
+                    <p className="bar-type-show">{this.props.bar.style}</p>  
             </div>
           </div>
           <div className="stats">
@@ -73,26 +73,16 @@ class DrinkDetail extends React.Component{
             </p>
           </div>
           <div className="details">
-                <p className="abv">{this.props.drink.abv} ABV</p>
-                <p className="ibu">12 ibu</p>
-                {/* <p>{this.props.drink.average_rating || 'No reviews yet'}</p> */}
-               
-                <div className="caps" data-rating="3.47423">
-                <div className="cap-100"></div>
-                <div className="cap-100"></div>
-                <div className="cap-100"></div>
-                <div className="cap-50"></div>
-                <div className="cap"></div>
-                </div>
+                {/* <p>{this.props.bar.average_rating || 'No reviews yet'}</p> */}
                 <span className="num">(3.47)</span>
                 <p className="ratings">2,788 Ratings </p>
           </div>
           <div className="bottom">
                 <div className="actions">
-                <button onClick={() => this.props.openModal({ modal: 'checkin', drinkId: drinkId})} className="drink-checkin-btn">
+                <button onClick={() => this.props.openModal({ modal: 'checkin', barId: barId})} className="bar-checkin-btn">
                   <div id="checkin-tag" className="checkin-tag hidden">
                     <div id="checkin-tag-tri"></div>
-                      <div id="checkin-tag-txt">Check-in this Drink</div>
+                      <div id="checkin-tag-txt">Check-in this Bar</div>
                       <div className="checkmark"><div className="check-mark"></div></div>
                   </div>
                 </button>
@@ -100,7 +90,7 @@ class DrinkDetail extends React.Component{
             </div>
             <div className="desc">
               <p>
-                {this.props.drink.description}
+                {this.props.bar.description}
               </p>
             </div>
             <div className="clear-fix"></div>
@@ -126,7 +116,7 @@ class DrinkDetail extends React.Component{
             ))
           } */}
           <CheckInIndex
-          checkIns={drink.checkIns ? drink.checkIns : {}}
+          checkIns={bar.checkIns ? bar.checkIns : {}}
           fetchCheckIns={this.props.fetchCheckIns}
           fetchCheckIn={this.props.fetchCheckIn}
           sessionId={this.props.currentUser}
@@ -144,7 +134,4 @@ class DrinkDetail extends React.Component{
     )
   }
 }
-export default DrinkDetail;
-
-
-
+export default BarDetail;
