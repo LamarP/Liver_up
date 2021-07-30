@@ -9,7 +9,7 @@ const CheckIn = ({ checkIn, author }) => {
     <div>
       <ul>
         <li>Rating: {rating}</li>
-        <li>{body} - by {author.username}</li>
+        <li>{body} - by {"placeholder"}</li>
 
       </ul>
     </div>

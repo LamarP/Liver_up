@@ -1,3 +1,5 @@
+import React from 'react';
+
 function StarIcon(props) {
   const { fill = 'none' } = props;
   return (
@@ -47,7 +49,7 @@ const Rating = () => {
     setRating(index);
   };
   return(
-    <div className="box flex">
+    <div className="box-flex">
       {[1, 2, 3, 4, 5].map((index) => {
         return (
           <RatingIcon 

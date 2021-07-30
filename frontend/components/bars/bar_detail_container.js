@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchBar, fetchAllBars } from './../../actions/bar_actions';
-import { fetchDrink, fetchDrinks } from './../../actions/drink_actions';
+import { fetchDrink, fetchAllDrinks } from './../../actions/drink_actions';
 import { fetchCheckIns, fetchCheckIn, deleteCheckIn } from './../../actions/check_in_actions';
 import BarDetail from "./bar_detail";
 import { openModal } from '../../actions/modal_actions';
@@ -17,7 +17,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchDrink: (drinkId) => dispatch(fetchDrink(drinkId)),
-    fetchDrinks: (drinks) => dispatch(fetchDrinks(drinks)),
+    fetchAllDrinks: (drinks) => dispatch(fetchAllDrinks(drinks)),
     fetchAllBars: () => dispatch(fetchAllBars()),
     fetchBar: (barId) => dispatch(fetchBar),
     openModal: modal => dispatch(openModal(modal)),

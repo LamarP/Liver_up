@@ -1,5 +1,5 @@
 import { RECEIVE_CHECKINS, RECEIVE_CHECKIN, REMOVE_CHECKIN } from '../actions/check_in_actions';
-
+import { RECEIVE_USER } from '../actions/user_actions';
 const checkInsReducer = (state = {}, action) => {
   Object.freeze(state);
   let nextState = Object.assign({}, state);
@@ -12,6 +12,8 @@ const checkInsReducer = (state = {}, action) => {
     case REMOVE_CHECKIN:
       delete nextState[action.checkIn.id];
       return nextState;
+      case RECEIVE_USER:
+        return action.payload.user || {};
     default:
       return state;
   }

@@ -621,6 +621,23 @@
       background-color: #fff;
       -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
     }
+    .global-recent-activity {
+      line-height: 1;
+      font-family: ProximaNova,Helvetica,sans-serif;
+      -webkit-text-size-adjust: none;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      vertical-align: baseline;
+      background: transparent;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 1.4em;
+      font-weight: 600;
+      padding-bottom: 32px;
+    }
 //    .checkmark {
 //     height: 100%;
 //     width: 100%;

@@ -18,9 +18,9 @@ const receiveCheckIn = checkIn => ({
   type: RECEIVE_CHECKIN,
   checkIn
 })
-const removeCheckIn = checkIn => ({
+const removeCheckIn = checkInId => ({
   type: REMOVE_CHECKIN,
-  checkIn
+  checkInId
 })
 
 export const fetchCheckIns = () => dispatch =>(
@@ -28,7 +28,7 @@ export const fetchCheckIns = () => dispatch =>(
     .then(checkIns => dispatch(receiveCheckIns(checkIns)))
 )
 
-export const fetchCheckIn = checkInId => dispatch(
+export const fetchCheckIn = checkInId => dispatch =>(
   CheckInAPIUtil.fetchCheckIn(checkInId)
   .then(checkIn => dispatch(receiveCheckIn(checkIn)))
 )

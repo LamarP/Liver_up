@@ -29,7 +29,7 @@ class DrinkDetail extends React.Component{
     if (!this.props.drink) return null;
     const drink = this.props.drink;
     const drinkId = parseInt(this.props.match.params.drinkId);
-    // const checkIns = this.props.checkIns;
+    const checkIns = this.props.checkIns;
     const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === drinkId);
     // const checkIn_arr = Object.values(checkIns);
     // debugger
@@ -116,16 +116,16 @@ class DrinkDetail extends React.Component{
                 <span><a>Friends</a></span>
                 <span><a>You</a></span>
               </div>
-                <h3>Global Recent Activity</h3>
+                <h3 className="global-recent-activity">Global Recent Activity</h3>
               <div className="checkins">    <ul>
           {/* {
              checkIn_arr.map((checkIn) => (
-            // <CheckIn
-            // key={`checkIn${checkIn.id}`}
-            //      checkIn={checkIn} />
+            <CheckIn
+            key={`checkIn${checkIn.id}`}
+                 checkIn={checkIn} />
             ))
           } */}
-          <CheckInIndex
+          <CheckInIndexContainer
           checkIns={drink.checkIns ? drink.checkIns : {}}
           fetchCheckIns={this.props.fetchCheckIns}
           fetchCheckIn={this.props.fetchCheckIn}

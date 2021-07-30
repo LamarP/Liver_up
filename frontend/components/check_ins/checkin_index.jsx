@@ -46,22 +46,33 @@ class CheckinIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchCheckins();
+    this.props.fetchCheckIns();
+
   }
 
   render() {
-
+    const { checkIns } = this.props;
+    // const checkIns = this.props.checkIns;
+    const checkIn_arr = Object.values(checkIns);
+    // const drink = this.props.drink;
+    // const drinkId = drink.id;
+    // const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === drinkId);
       return (
         <li className="checkin-index-item-container">
+            {
+          checkIn_arr.map((checkIn) => (
           <CheckinIndexItem
-            key={checkIn.id + checkIn.rating}
-            checkIn={checkIn}
-            checkInId={checkIn.id}
-            sessionId={this.props.sessionId}
-            deleteCheckIn={this.props.deleteCheckIn}
-            fetchUser={this.props.fetchUser ? this.props.fetchUser : ""}
-            profileId={this.props.profileId ? this.props.profileId : ""}
-          />
+          key={checkIn.id + checkIn.rating}
+          checkIn={checkIn}
+          checkInId={checkIn.id}
+          sessionId={this.props.sessionId}
+          deleteCheckIn={this.props.deleteCheckIn}
+          fetchUser={this.props.fetchUser ? this.props.fetchUser : ""}
+          profileId={this.props.profileId ? this.props.profileId : ""}
+        />
+            
+
+          ))}
         </li>
       )
       
