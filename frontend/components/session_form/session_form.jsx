@@ -94,9 +94,9 @@ class SessionForm extends React.Component {
                 onClick={this.handleDemoUser}>Secret Entrance</button>
               
           </div>
-                  <ul>
-                   {this.props.navLink}
-                  </ul>
+            <ul className="nav-link">
+                  New around here? {this.props.navLink}
+            </ul>
         </form>
           </div>
             
