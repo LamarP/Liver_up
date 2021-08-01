@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-
+import ProfileContainer from '../profile/profile_container';
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -28,7 +28,14 @@ class Navbar extends React.Component {
                     <div className="dropdown-content">
                       <ul>
                         <li>
-                            <Link className="dropdown-link" to={`/users/${this.props.currentUser.id}`}>Profile</Link>
+                          <ProfileContainer
+                                checkIns={user.checkIns ? user.checkIns : {}}
+                                fetchCheckIns={this.props.fetchCheckIns}
+                                fetchCheckIn={this.props.fetchCheckIn}
+                                sessionId={this.props.currentUser}
+                                deleteCheckIn={this.props.deleteCheckIn}
+                          />
+                            {/* <Link className="dropdown-link" to={`/users/${this.props.currentUser.id}`}>Profile</Link> */}
                         </li>
                         <li>
                                 <a className="dropdown-link" onClick={this.props.logout}>Logout</a>

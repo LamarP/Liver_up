@@ -6,10 +6,10 @@ import NavBarContainer from '../nav/navbar_container';
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <div className="entrance">
-      <div className="logo-slogan-container">
+      {/* <div className="logo-slogan-container"> */}
       {/* <img className= "liver-up-logo" src={window.logo} /> */}
-      <h2 className="slogan">Find and share your inner demons</h2> 
-      </div>
+      {/* <h2 className="slogan">Find and share your inner demons</h2>  */}
+      {/* </div> */}
       <div className="login-signup">
         <div className="buttons">
           <Link to="/login">Sign in</Link>
