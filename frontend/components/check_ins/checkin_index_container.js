@@ -5,9 +5,9 @@ import { fetchAllDrinks } from '../../actions/drink_actions';
 import { fetchAllBars } from '../../actions/bar_actions';
 const mapStateToProps = (state, ownProps) => ({
   checkIns: state.entities.checkIns,
+  // checkIn: state.entities.checkIns[ownProps.match.params.checkInId],
   // drink: state.entities.drinks[ownProps.match.params.checkIn.drinkId],
   bars: Object.values(state.entities.bars),
-  // checkIn: state.entities.checkIns[ownProps.match.params.checkInId],
   // checkInId: ownProps.match.params.checkInId,
   currentUserId: state.session.currentUserId,
   drinks: Object.values(state.entities.drinks),

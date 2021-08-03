@@ -22,6 +22,14 @@ const Home = () => {
     </div>
   )
 }
+      {/* <CheckInIndexContainer
+          // checkIns={drink.checkIns ? drink.checkIns : {}}
+          // checkIns={checkIn_arr ? checkIn_arr : {}}
+          // fetchCheckIns={this.props.fetchCheckIns}
+          // fetchCheckIn={this.props.fetchCheckIn}
+          // sessionId={this.props.currentUser}
+          // deleteCheckIn={this.props.deleteCheckIn}
 
+        /> */}
 
 export default Home;

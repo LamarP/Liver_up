@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => ({
   profile: state.entities.profile,
   profileId: ownProps.match.params.profileId,
   sessionId: state.session.id,
-  checkIns: state.entities.checkIns
+  // checkIns: state.entities.checkIns
 })
 
 const mapDispatchToProps = dispatch => ({

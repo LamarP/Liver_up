@@ -24,8 +24,6 @@ class CheckInForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const drinkId = parseInt(this.props.location.pathname.split('/')[2]);
-    console.log(drinkId);
-
     const checkIn = Object.assign({}, this.state, {
       drink_id: drinkId
     });

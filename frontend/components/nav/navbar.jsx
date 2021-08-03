@@ -9,7 +9,7 @@ class Navbar extends React.Component {
 
 
     render() {
-
+      const { currentUser } = this.props
         if (this.props.currentUser === undefined) {
             return null;
         } else {
@@ -28,14 +28,8 @@ class Navbar extends React.Component {
                     <div className="dropdown-content">
                       <ul>
                         <li>
-                          <ProfileContainer
-                                checkIns={user.checkIns ? user.checkIns : {}}
-                                fetchCheckIns={this.props.fetchCheckIns}
-                                fetchCheckIn={this.props.fetchCheckIn}
-                                sessionId={this.props.currentUser}
-                                deleteCheckIn={this.props.deleteCheckIn}
-                          />
-                            {/* <Link className="dropdown-link" to={`/users/${this.props.currentUser.id}`}>Profile</Link> */}
+
+                            <Link className="dropdown-link" to={`/users/${currentUser.id}`}>Profile</Link>
                         </li>
                         <li>
                                 <a className="dropdown-link" onClick={this.props.logout}>Logout</a>

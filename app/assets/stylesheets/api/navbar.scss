@@ -8,18 +8,56 @@
   color: white;
   text-align: center;
   height: 80px;
-  border-top: 12px solid rgba(23, 108, 235, 0.774);
+  border-top: 12px solid rgb(66, 65, 65);
   border-bottom: 52px solid rgba(28, 60, 119, 0.76);
   width: 100%;
   // flex-flow: row wrap;
   flex-grow: 1;
   z-index:1000;
   box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.30);
-
+  
 }
 
 #nav-links {
+  // width: 100%;
+  // line-height: 1;
+  // font-family: ProximaNova,Helvetica,sans-serif;
+  // -webkit-text-size-adjust: none;
+  // -webkit-tap-highlight-color: rgba(0,0,0,0);
+  // margin: 0;
+  // border: 0;
+  // outline: 0;
+  // font-size: 100%;
+  // vertical-align: baseline;
+  // background: transparent;
+  // display: block;
+  // width: 100%;
+  // box-sizing: border-box;
+  // align-items: center;
+  // background-color: #fff;
+  // box-shadow: 0 1px 1px rgba(0,0,0,.1),inset 0 8px 0  rgba(23, 108, 235, 0.774);
+  // padding: 1rem;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // z-index: 100;
+  line-height: 1;
+  font-family: ProximaNova,Helvetica,sans-serif;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
   width: 100%;
+  box-sizing: border-box;
+  max-width: 1048px;
+  margin: 0 auto;
+  padding: 0 12px;
+  height: 52px;
+  position: relative;
 }
 
 .navbar a {
@@ -53,8 +91,8 @@
 
 .navbar-logo {
   font-size: 32px;
-  margin: 10px;
-  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
   color: black;
   text-decoration: none;
   
@@ -86,31 +124,31 @@
 //   color: grey;
 // }
 
-// .nav-dive {
-//   color: white;
-//   font-family: normal;
-//   margin: 10px;
-//   margin-left: 20px;
-//   font-size: 18px;
-//   font-weight: 300;
-//   padding: 10px;
-//   text-decoration: none;
-//   float: left;
-// }
+.navbar-dive {
+  color: white;
+  font-family: inherit;
+  margin: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 10px;
+  text-decoration: none;
+  float: left;
+}
 
 
-// .navbar .nav-drinks {
-//   color: white;
-//   font-family: inherit;
-//   margin: 10px;
-//   font-size: 18px;
-//   font-weight: 300;
-//   text-decoration: none;
-//   float: left;
-//   display: block;
-//   padding: 8px;
-//   right: -5px;
-// }
+.navbar-drinks {
+  color: white;
+  font-family: inherit;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none;
+  float: left;
+  display: block;
+  padding: 8px;
+  right: -5px;
+}
 
 
 .top-user-circle {

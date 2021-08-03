@@ -20,11 +20,11 @@ class CheckinIndexItem extends React.Component {
   render() {
     // const {checkIn, sessionId} = this.props;
     // const showDelete = checkIn.author_id === sessionId ? "show-delete" : "hide-delete"
-    const checkIn = this.props.checkIn; 
+    const checkIn = this.props.checkIn;
+    console.log(checkIn);
     const showDelete = checkIn.authorId === this.props.currentUserId ?  <p className="orange-link" onClick={() => {
-        return this.props.deleteCheckin(checkIn.id)
+        return this.props.deleteCheckIn(checkIn.id)
     }}>Delete Check-in</p> : null;
-    console.log(this.props);
     return (
       <div className="checkin-index-item">
         <div className="checkin-item-row-1">
@@ -38,17 +38,17 @@ class CheckinIndexItem extends React.Component {
         <div className="checkin-item-row-2">
           <div className="checkin-item-tri"></div>
           <div className="checkin-body">
-            {/* <p>{checkIn.body}</p> */}
+            <p>{checkIn.body}</p>
             <div className="checkin-body-bottom">
-              <Rating rating={checkIn.rating}/>
-              {/* <p>{checkIn.drink.drink_style}</p> */}
-            </div>
+            {checkIn.rating}
+              {/* <p>{drink.drink_style}</p> */}
+             </div>
           </div>
         </div>
         <div className="checkin-item-row-3">
           <div className="checkin-item-links">
 
-            <Link to={`/check_ins/${checkIn.id}`}>View Detailed Check-in</Link>
+            {/* <Link to={`/check_ins/${checkIn.id}`}>View Detailed Check-in</Link> */}
             <div className={showDelete}>
               <Link to={`/check_ins`} onClick={this.deleteCheckIn}>Delete Check-in</Link>
             </div>

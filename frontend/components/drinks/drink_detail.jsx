@@ -4,6 +4,7 @@ import CheckInIndex from '../check_ins/checkin_index';
 import CheckInFormContainer from '../check_ins/check_in_form_container';
 import CheckInIndexContainer from '../check_ins/checkin_index_container';
 import CheckInIndexItem from '../check_ins/check_in_item';
+import CheckinIndexItem from '../check_ins/checkin_index_item';
 import CheckIn from '../check_ins/check_in_item_container';
 class DrinkDetail extends React.Component{
   constructor(props) {
@@ -31,6 +32,8 @@ class DrinkDetail extends React.Component{
     const drinkId = parseInt(this.props.match.params.drinkId);
     const checkIns = this.props.checkIns;
     const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === drinkId);
+
+
     // const checkIn_arr = Object.values(checkIns);
     // debugger
     return (
@@ -111,28 +114,27 @@ class DrinkDetail extends React.Component{
           <div className="box-activity">
             <div className="box-content">
               <div className="filters">
-                <span>Sort by:</span>
+                {/* <span>Sort by:</span>
                 <span className="current">Global</span>
                 <span><a>Friends</a></span>
-                <span><a>You</a></span>
+                <span><a>You</a></span> */}
               </div>
                 <h3 className="global-recent-activity">Global Recent Activity</h3>
               <div className="checkins">    <ul>
-          {/* {
+          {
              checkIn_arr.map((checkIn) => (
-            <CheckIn
+            <CheckinIndexItem
             key={`checkIn${checkIn.id}`}
-                 checkIn={checkIn} />
+                 checkIn={checkIn}
+                 checkInId={checkIn.id}
+                 sessionId={this.props.sessionId}
+                 deleteCheckIn={this.props.deleteCheckIn}
+                 fetchUser={this.props.fetchUser ? this.props.fetchUser : ""}
+                 profileId={this.props.profileId ? this.props.profileId : ""}
+               />
             ))
-          } */}
-          <CheckInIndexContainer
-          checkIns={drink.checkIns ? drink.checkIns : {}}
-          fetchCheckIns={this.props.fetchCheckIns}
-          fetchCheckIn={this.props.fetchCheckIn}
-          sessionId={this.props.currentUser}
-          deleteCheckIn={this.props.deleteCheckIn}
-
-        />
+          }
+    
                 </ul>
                 </div>
         </div>
