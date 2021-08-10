@@ -36,33 +36,56 @@ class CheckInForm extends React.Component {
   update(property) {
     return e => this.setState({ [property]: e.currentTarget.value });
   }
-
+  
   render() {
     return (
-      <div className="checkIn-form">
-        <form onSubmit={this.handleSubmit}>
-          <label>Rating</label>
-          <br/>
-          <input
-            type="number"
-            value={this.state.rating}
-            onChange={this.update("rating")}
-          />
-          <br/>
-
-          <label>Comment</label>
+      <div className="checkin-modal-container">
+      <div className="checkin-modal-box">
+        <div className="checkin-form-top">
+          <h3>Check-In
+            <button className="checkin-modal-x" onClick={this.props.closeModal}>X</button>
+          </h3>
+        </div>
+        <form onSubmit={this.handleSubmit} >
           <br/>
 
-          <textarea
+          {/* <textarea
             cols="30"
             rows="10"
             value={this.state.body}
             onChange={this.update("body")}
+            className="checkin-comment"  
+          /> */}
+            <div className="checkin-comment-box">
+                  <input className="checkin-comment"
+                  type="text"
+                  placeholder="What did you think?"
+                  value={this.state.body}
+                  onChange={this.update('body')}
+                  />
+
+            </div>
+            <div className="rate-drink">
+          <label>Rating</label>
+              <br />
+              <div>
+                <input
+                  className="slider"
+            type="number"
+            value={this.state.rating}
+            onChange={this.update("rating")}
           />
+
+              </div>
+
+            </div>
+          <br/>
+
           <br/>
           <input type="submit" />
         </form>
-        <button onClick={this.props.closeModal}>Cancel</button>
+      </div>
+
       </div>
     );
  }

@@ -57,23 +57,68 @@ class CheckinIndex extends React.Component {
     // const drink = this.props.drink;
     // const drinkId = drink.id;
     // const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === drinkId);
-      return (
-        <li className="checkin-index-item-container">
-            {
-          checkIn_arr.map((checkIn) => (
-          <CheckinIndexItem
-          key={checkIn.id + checkIn.rating}
-          checkIn={checkIn}
-          checkInId={checkIn.id}
-          sessionId={this.props.sessionId}
-          deleteCheckIn={this.props.deleteCheckIn}
-          fetchUser={this.props.fetchUser ? this.props.fetchUser : ""}
-          profileId={this.props.profileId ? this.props.profileId : ""}
-        />
+    return (
+        // <div id="slide">
+        // <li className="checkin-index-item-container">
+        //     {
+        //   checkIn_arr.map((checkIn) => (
+        //   <CheckinIndexItem
+        //   key={checkIn.id + checkIn.rating}
+        //   checkIn={checkIn}
+        //   checkInId={checkIn.id}
+        //   sessionId={this.props.sessionId}
+        //   deleteCheckIn={this.props.deleteCheckIn}
+        //   fetchUser={this.props.fetchUser ? this.props.fetchUser : ""}
+        //   profileId={this.props.profileId ? this.props.profileId : ""}
+        // />
             
 
-          ))}
-        </li>
+        //   ))}
+        // </li>
+        
+        // </div>
+        <div id="slide">
+        <div className="cont-drink-page">
+
+      <div className="main">
+
+      <div className="box-drink-page">
+        <div className="content">
+        
+        <div className="box-activity">
+        <div className="box-content">
+          <div className="filters">
+            {/* <span>Sort by:</span>
+            <span className="current">Global</span>
+            <span><a>Friends</a></span>
+            <span><a>You</a></span> */}
+          </div>
+            <h3 className="global-recent-activity">Global Recent Activity</h3>
+          <div className="checkins">    <ul>
+      {
+         checkIn_arr.map((checkIn) => (
+        <CheckinIndexItem
+        key={`checkIn${checkIn.id}`}
+             checkIn={checkIn}
+             checkInId={checkIn.id}
+             sessionId={this.props.sessionId}
+             deleteCheckIn={this.props.deleteCheckIn}
+             fetchUser={this.props.fetchUser ? this.props.fetchUser : ""}
+             profileId={this.props.profileId ? this.props.profileId : ""}
+           />
+        ))
+      }
+
+            </ul>
+            </div>
+    </div>
+  </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
       )
       
 

@@ -19,10 +19,10 @@ class Navbar extends React.Component {
                 <div id="logo-div">
                 <Link to="/" className="navbar-logo">Liver_up</Link>
                 </div>
-                    <Link to="/" className="navbar-dive">The Dive</Link>
+                    <Link to="/thedive" className="navbar-dive">The Dive</Link>
                     <Link to="/drinks" className="navbar-drinks">Drinks</Link>
                     <div className="dropdown">
-                            <button className="dropbtn"><Link to={`/users/${this.props.currentUser.id}`}>&#9860;</Link>
+                            <button className="dropbtn"><Link to={`/users/${this.props.currentUser.id}`}><img className="profile-img" src={window.profile}alt="" /></Link>
                     </button>
                             
                     <div className="dropdown-content">

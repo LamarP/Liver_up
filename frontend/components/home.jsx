@@ -17,7 +17,7 @@ const Home = () => {
     <Switch>
         
       <ProtectedRoute exact path="/home" component={DrinkIndexContainer} />
-      <ProtectedRoute exact path="/drink/:drinkId" component={DrinkDetailContainer} />
+      {/* <ProtectedRoute exact path="/drink/:drinkId" component={DrinkDetailContainer} /> */}
     </Switch>
     </div>
   )

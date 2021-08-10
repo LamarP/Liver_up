@@ -19,6 +19,7 @@ import BarIndexContainer from './bars/bar_index_container';
 import CheckInShowContainer from './check_ins/check_in_show_container';
 import NavBarContainer from './nav/navbar_container';
 import ProfileContainer from './profile/profile_container';
+import CheckinIndexContainer from './check_ins/checkin_index_container';
 // import Home from './home';
 import Modal from './modal/modal';
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -38,7 +39,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      
+      <ProtectedRoute path='/thedive' component={CheckinIndexContainer} />   
       <ProtectedRoute exact path="/drinks" component={DrinkIndexContainer}/>
       <ProtectedRoute exact path="/drink/:drinkId" component={DrinkDetailContainer} />
       <ProtectedRoute exact path='/bars' component={BarIndexContainer}/>

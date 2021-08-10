@@ -33,7 +33,6 @@ class DrinkDetail extends React.Component{
     const checkIns = this.props.checkIns;
     const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === drinkId);
 
-
     // const checkIn_arr = Object.values(checkIns);
     // debugger
     return (
@@ -93,11 +92,11 @@ class DrinkDetail extends React.Component{
           <div className="bottom">
                 <div className="actions">
                 <button onClick={() => this.props.openModal({ modal: 'checkin', drinkId: drinkId})} className="drink-checkin-btn">
-                  <div id="checkin-tag" className="checkin-tag hidden">
-                    <div id="checkin-tag-tri"></div>
-                      <div id="checkin-tag-txt">Check-in this Drink</div>
-                      <div className="checkmark"><div className="check-mark"></div></div>
-                  </div>
+                  {/* <div id="checkin-tag" className="checkin-tag hidden"> */}
+
+                      {/* <div id="checkin-tag-txt">Check-in this Drink</div> */}
+                        {/* </div> */}
+                        <img className="check-image" src={window.check}alt="" />
                 </button>
 
             </div>

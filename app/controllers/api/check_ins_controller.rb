@@ -13,7 +13,7 @@ class Api::CheckInsController < ApplicationController
   end
 
   def destroy
-    @checkin = CheckIn.find(id: params[:id])
+    @checkin = CheckIn.find_by(id: params[:id])
     if @checkin
       @checkin.destroy
       render :show
@@ -35,6 +35,6 @@ class Api::CheckInsController < ApplicationController
 
   private
   def checkin_params
-    params.require(:checkin).permit(:rating, :body, :drink_id, :author_id)
+    params.require(:checkin).permit(:checkinId, :rating, :body, :drink_id, :author_id)
   end
 end
