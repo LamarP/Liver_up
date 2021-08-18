@@ -25,15 +25,11 @@ class Profile extends React.Component {
     const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.author_id === sessionId);
     const total = checkIn_arr.length ? checkIn_arr.length : 0;
     const uniqueHash = {};
-    // const uniqueCount = checkIn_arr.length ? checkIn_arr.forEach(checkin => {
-    //   if (!uniqueHash[checkin.drink_id]) uniqueHash[checkin.drink_id] = 0;
-    //   uniqueHash[checkin.drink_id]++;
-    // })
-    //   const unique = Object.keys(uniqueHash).length;
     const uniqueCount = checkIn_arr.length ? checkIn_arr.forEach(checkin => {
       if (!uniqueHash[checkin.drink_id]) uniqueHash[checkin.drink_id] = 0;
       uniqueHash[checkin.drink_id]++;
     }) : "";
+ 
     const unique = Object.keys(uniqueHash).length;
     return (
       <div id="slide">

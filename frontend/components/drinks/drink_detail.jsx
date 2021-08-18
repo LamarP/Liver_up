@@ -1,11 +1,6 @@
 import React from 'react';
 // import { Link, Route } from 'react-router-dom';
-import CheckInIndex from '../check_ins/checkin_index';
-import CheckInFormContainer from '../check_ins/check_in_form_container';
-import CheckInIndexContainer from '../check_ins/checkin_index_container';
-import CheckInIndexItem from '../check_ins/check_in_item';
 import CheckinIndexItem from '../check_ins/checkin_index_item';
-import CheckIn from '../check_ins/check_in_item_container';
 class DrinkDetail extends React.Component{
   constructor(props) {
     super(props);
@@ -28,11 +23,26 @@ class DrinkDetail extends React.Component{
 
   render() {
     if (!this.props.drink) return null;
+    const sessionId = this.props.sessionId;
     const drink = this.props.drink;
     const drinkId = parseInt(this.props.match.params.drinkId);
     const checkIns = this.props.checkIns;
     const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === drinkId);
-
+    const total = checkIn_arr.length ? checkIn_arr.length : 0;
+    const uniqueHash = {};
+    const youHash = {};
+    const userCheckIns = {}
+    console.log(this.props);
+    const uniqueCount = checkIn_arr.length ? checkIn_arr.forEach(checkin => {
+      if (!uniqueHash[checkin.drink_id]) uniqueHash[checkin.drink_id] = 0;
+      uniqueHash[checkin.drink_id]++;
+    }) : "";
+    const youCount = checkIn_arr.length ? checkIn_arr.forEach(checkin => {
+      if (!youHash[checkin.author_id] && checkin.author_id === sessionId) youHash[checkin.author_id] = 0;
+      youHash[checkin.author_id]++;
+    }) : "";
+    const unique = Object.keys(uniqueHash).length;
+    const you = Object.keys(youHash).length;
     // const checkIn_arr = Object.values(checkIns);
     // debugger
     return (
@@ -58,12 +68,15 @@ class DrinkDetail extends React.Component{
           </div>
           <div className="stats">
             <p>
+              {/* <span className="stat">TOTAL</span>
+              <span className="count">4,204</span> */}
               <span className="stat">TOTAL</span>
-              <span className="count">4,204</span>
+              <span className="count" id="total">{total}</span>
+                    
             </p>
             <p>
               <span className="stat">UNIQUE</span>
-              <span className="count">5,304</span>
+              <span className="count" id="unique">{unique}</span>
             </p>
             <p>
               <span className="stat">MONTHLY</span>
@@ -71,7 +84,7 @@ class DrinkDetail extends React.Component{
             </p>
             <p>
               <span className="stat">YOU</span>
-              <span className="count">0</span>
+              <span className="count" id="count">{you}</span>
             </p>
           </div>
           <div className="details">

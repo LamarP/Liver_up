@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Rating from '../ratings/ratings';
+
 
 
 
@@ -9,6 +9,7 @@ class CheckinIndexItem extends React.Component {
     super(props);
     
     this.deleteCheckIn = this.deleteCheckIn.bind(this);
+
   }
   // componentDidMount() {
   //   this.props.fetchDrink(this.props.match.params.drinkId)
@@ -29,11 +30,33 @@ class CheckinIndexItem extends React.Component {
     this.props.deleteCheckIn(this.props.checkInId)
   }
 
+ 
+
   render() {
     // const {checkIn, sessionId} = this.props;
     // const showDelete = checkIn.author_id === sessionId ? "show-delete" : "hide-delete"
     const checkIn = this.props.checkIn;
+    const rating = this.props.checkIn.rating;
+    let drunks_arr = [];
+    let r = this.props.checkIn.rating;
+    if (r === 1) {
+      drunks_arr.push (window.oneDrunk);
+    } else if(r === 2) {
+      drunks_arr.push (window.twoDrunks);
+    } else if (r === 3) {
+      drunks_arr.push (window.threeDrunks);
+    } else if (r === 4) {
+      drunks_arr.push (window.fourDrunks);
+    } else if (r === 5) {
+      drunks_arr.push (window.fiveDrunks);
+    } else {
+      drunks_arr.push (window.zeroDrunks);
+    }
+    let drunks = drunks_arr[0];
+    console.log(drunks);
+     
 
+ 
     return (
       <div className="checkin-index-item">
         <div className="checkin-item-row-1">
@@ -48,8 +71,8 @@ class CheckinIndexItem extends React.Component {
           <div className="checkin-item-tri"></div>
           <div className="checkin-body">
           {checkIn.authorName } says: <p>{ checkIn.body}</p>
-            <div className="checkin-body-bottom"> Rating: { checkIn.rating} out of 5!
-              {/* <p>{drink.drink_style}</p> */}
+            <div className="checkin-body-bottom"> 
+            <img className="rating_img" src={drunks} width='30%' height="auto" />
              </div>
           </div>
         </div>
