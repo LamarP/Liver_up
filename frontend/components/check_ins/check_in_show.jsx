@@ -20,8 +20,8 @@ class CheckInShow extends React.Component {
     if (!this.props.checkIn) { return null
  
     } else {
-      const checkin = this.props.checkin;
-      const revealShowImg = checkin.photoURL ? "" : "hidden";
+      // const checkin = this.props.checkin;
+      // const revealShowImg = checkin.photoURL ? "" : "hidden";
 
 
       return (

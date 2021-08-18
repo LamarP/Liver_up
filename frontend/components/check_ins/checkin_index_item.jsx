@@ -10,7 +10,19 @@ class CheckinIndexItem extends React.Component {
     
     this.deleteCheckIn = this.deleteCheckIn.bind(this);
   }
-
+  // componentDidMount() {
+  //   this.props.fetchDrink(this.props.match.params.drinkId)
+  //   this.props.fetchCheckIns()
+  // }
+  
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps.match.params.drinkId !== this.props.match.params.drinkId) {
+  //     this.props.fetchDrink(this.props.match.params.drinkId)
+  //   }
+  //   if (prevProps.match.params.checkInId !== this.props.match.params.checkInId) {
+  //     this.props.fetchCheckIn(this.props.match.params.checkInId)
+  //   }
+  // }
 
   deleteCheckIn(e) {
     e.preventDefault();
@@ -21,7 +33,7 @@ class CheckinIndexItem extends React.Component {
     // const {checkIn, sessionId} = this.props;
     // const showDelete = checkIn.author_id === sessionId ? "show-delete" : "hide-delete"
     const checkIn = this.props.checkIn;
-    console.log(checkIn);
+
     return (
       <div className="checkin-index-item">
         <div className="checkin-item-row-1">

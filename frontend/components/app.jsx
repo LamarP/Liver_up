@@ -36,12 +36,12 @@ const App = () => (
 
     <GreetingContainer/>
     </div>
-    <Switch>
+    <Switch> 
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute path='/thedive' component={CheckinIndexContainer} />   
       <ProtectedRoute exact path="/drinks" component={DrinkIndexContainer}/>
-      <ProtectedRoute exact path="/drink/:drinkId" component={DrinkDetailContainer} />
+      <ProtectedRoute exact path="/drinks/:drinkId" component={DrinkDetailContainer} />
       <ProtectedRoute exact path='/bars' component={BarIndexContainer}/>
       <ProtectedRoute exact path='/bars/:barId' component={BarDetailContainer}/>
       <ProtectedRoute exact path="/checkIns/:checkInId" component={CheckInShowContainer} /> 
