@@ -21,6 +21,7 @@ class Navbar extends React.Component {
                 </div>
                     <Link to="/thedive" className="navbar-dive">The Dive</Link>
                     <Link to="/drinks" className="navbar-drinks">Drinks</Link>
+                    <Link to="/bars" className="navbar-bars">Bars</Link>
                     <div className="dropdown">
                             <button className="dropbtn"><Link to={`/profiles/${this.props.currentUser.id}`}><img className="profile-img" src={window.profile}alt="" /></Link>
                     </button>

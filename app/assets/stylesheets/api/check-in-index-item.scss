@@ -96,3 +96,17 @@
   box-sizing: border-box;
 }
 
+.checkin-item-links a{
+  line-height: 1;
+  font-family: ProximaNova,Helvetica,sans-serif;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+  color: #8a4500;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 12px 16px 0;
+  font-size: .8em;
+}

@@ -13,16 +13,16 @@ class BarIndexItem extends React.Component{
       <div>
         <ul>
       <li className="bar-index-item">
-        <Link to={`/bar/${this.props.bar.id}`}>
+        <Link to={`/bars/${this.props.bar.id}`}>
           {/* <img src={this.props.bar.img_url}/> */}
           
-          <span className="bar-name">{this.props.bar.bar_name}</span>
+          <span className="bar-name">{this.props.bar.name}</span>
         </Link>
           
           
-          <span className="bar-style">{this.props.bar.bar_style} </span>
+          <span className="bar-style">{this.props.bar.style} </span>
         
-        <span className="bar-description">{this.props.bar.description}</span>
+        <span className="bar-location">{this.props.bar.location}</span>
         
         </li>
 
