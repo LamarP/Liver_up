@@ -17,22 +17,16 @@ class BarIndex extends React.Component{
     
     return (
       <div className="bars">
-        
-        
-        
           <Route path="/bars/:barId" component={BarDetailContainer}/>
         <ul>
           {
              bar_arr.map((bar) => (
             <BarIndexItem
             key={`bar${bar.id}`}
-                 bar={bar} />
-               
+                 bar={bar} /> 
             ))
           }
-        </ul>
-        
-          
+        </ul>   
       </div>
     )
   }

@@ -10,7 +10,7 @@ const checkInsReducer = (state = {}, action) => {
       nextState[action.checkIn.id] = action.checkIn;
       return nextState;
     case REMOVE_CHECKIN:
-      delete nextState[action.checkIn.id];
+      delete nextState[action.checkInId];
       return nextState;
       case RECEIVE_USER:
         return action.payload.user || {};

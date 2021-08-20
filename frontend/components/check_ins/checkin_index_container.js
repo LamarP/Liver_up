@@ -14,6 +14,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+
   fetchCheckIns: () => dispatch(fetchCheckIns()),
   fetchCheckIn: checkinId => dispatch(fetchCheckIn(checkinId)),
   deleteCheckIn: (checkInId) => dispatch(deleteCheckIn(checkInId)),

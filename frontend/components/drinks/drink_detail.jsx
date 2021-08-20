@@ -104,13 +104,10 @@ class DrinkDetail extends React.Component{
           </div>
           <div className="bottom">
                 <div className="actions">
-                <button onClick={() => this.props.openModal({ modal: 'checkin', drinkId: drinkId})} className="drink-checkin-btn">
-                  {/* <div id="checkin-tag" className="checkin-tag hidden"> */}
-
-                      {/* <div id="checkin-tag-txt">Check-in this Drink</div> */}
-                        {/* </div> */}
-                        <img className="check-image" src={window.check}alt="" />
-                </button>
+                      <div className="image-wrap">
+                        <img onClick={() => this.props.openModal({ modal: 'checkin', drinkId: drinkId})} className="check-image" src={window.check}alt="" />
+                        <p className="checkin-drink">Checkin this drink!!!</p>
+                      </div>
 
             </div>
             <div className="desc">

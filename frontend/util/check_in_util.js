@@ -14,15 +14,6 @@ export const fetchCheckIn = (checkinId) => (
   })
 );
 
-// export const createCheckIn = (checkin) => (
-//   $.ajax({
-//     method: 'POST',
-//     url: `/api/check_ins`,
-//     data: checkin,
-//     contentType: false,
-//     processData: false
-//   })
-// );
 export const createCheckIn = checkin => {
   return $.ajax({
       method: "POST",

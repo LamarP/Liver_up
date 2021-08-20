@@ -46,10 +46,10 @@ class BarDetail extends React.Component{
     <div className="top">
           <div className="basic">
             <a className="label">
-                <img className="bar-image" src={this.props.bar.img_url} alt={this.props.bar.drink_name} width='30%' height="auto" />
+                <img className="bar-image" src={this.props.bar.img_url} alt={this.props.bar.name} width='30%' height="auto" />
             </a>
             <div className="name">
-                    <h1>{this.props.bar.drink_name}</h1>
+                    <h1>{this.props.bar.name}</h1>
                     <p className="bar-name">placeholder</p>
                     <p className="bar-type-show">{this.props.bar.style}</p>  
             </div>
@@ -78,14 +78,14 @@ class BarDetail extends React.Component{
                 <p className="ratings">2,788 Ratings </p>
           </div>
           <div className="bottom">
-                <div className="actions">
+                {/* <div className="actions">
                 <button onClick={() => this.props.openModal({ modal: 'checkin', barId: barId})} className="bar-checkin-btn">
                   <div id="checkin-tag" className="checkin-tag hidden">
                     <div id="checkin-tag-tri"></div>
                       <div id="checkin-tag-txt">Check-in this Bar</div>
                       <div className="checkmark"><div className="check-mark"></div></div>
-                  </div>
-                </button>
+                  </div> */}
+                {/* </button> */}
 
             </div>
             <div className="desc">
@@ -99,14 +99,14 @@ class BarDetail extends React.Component{
     </div>
           </div>
           <div className="box-activity">
-            <div className="box-content">
+            {/* <div className="box-content">
               <div className="filters">
                 <span>Sort by:</span>
                 <span className="current">Global</span>
                 <span><a>Friends</a></span>
                 <span><a>You</a></span>
               </div>
-                <h3>Global Recent Activity</h3>
+                <h3>Global Recent Activity</h3> */}
               <div className="checkins">    <ul>
           {/* {
              checkIn_arr.map((checkIn) => (
@@ -126,9 +126,9 @@ class BarDetail extends React.Component{
                 </ul>
                 </div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
-  </div>
+  {/* </div> */}
 </div>
      
     )

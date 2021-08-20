@@ -27,15 +27,15 @@ class CheckinIndexItem extends React.Component {
 
   deleteCheckIn(e) {
     e.preventDefault();
-    this.props.deleteCheckIn(this.props.checkInId)
+    this.props.deleteCheckIn(this.props.checkInId);
   }
 
  
 
   render() {
-    // const {checkIn, sessionId} = this.props;
-    // const showDelete = checkIn.author_id === sessionId ? "show-delete" : "hide-delete"
-    const checkIn = this.props.checkIn;
+
+    const {checkIn, sessionId} = this.props;
+    const showDelete = checkIn.author_id === sessionId ? "show-delete" : "hide-delete"
     const rating = this.props.checkIn.rating;
     let drunks_arr = [];
     let r = this.props.checkIn.rating;
@@ -80,8 +80,8 @@ class CheckinIndexItem extends React.Component {
           <div className="checkin-item-links">
 
             {/* <Link to={`/check_ins/${checkIn.id}`}>View Detailed Check-in</Link> */}
-            <div className='delete-checkin'>
-              <Link to={`/check_ins`} onClick={this.deleteCheckIn}>Delete Check-in</Link>
+            <div>
+              <Link className={showDelete} to={`/check_ins`} onClick={this.deleteCheckIn}>Delete Check-in</Link>
             </div>
           </div>
         </div>

@@ -20,29 +20,6 @@
 }
 
 #nav-links {
-  // width: 100%;
-  // line-height: 1;
-  // font-family: ProximaNova,Helvetica,sans-serif;
-  // -webkit-text-size-adjust: none;
-  // -webkit-tap-highlight-color: rgba(0,0,0,0);
-  // margin: 0;
-  // border: 0;
-  // outline: 0;
-  // font-size: 100%;
-  // vertical-align: baseline;
-  // background: transparent;
-  // display: block;
-  // width: 100%;
-  // box-sizing: border-box;
-  // align-items: center;
-  // background-color: #fff;
-  // box-shadow: 0 1px 1px rgba(0,0,0,.1),inset 0 8px 0  rgba(23, 108, 235, 0.774);
-  // padding: 1rem;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // z-index: 100;
   line-height: 1;
   font-family: ProximaNova,Helvetica,sans-serif;
   -webkit-text-size-adjust: none;
@@ -62,12 +39,6 @@
 }
 
 .navbar a {
-  // display: flex;
-  // margin: 0 auto;
-  // margin-top: 1%;
-  // justify-content: space-between;
-  // float: left;
-  // align-items:center;
   float: left;
   display: block;
   text-align: center;
@@ -156,7 +127,6 @@ flex-grow: 2;
 }
 
 .dropdown {
-  // display: flex;
   justify-content: center;
   position: relative;
   display: inline-block;
@@ -164,22 +134,14 @@ flex-grow: 2;
   color: white;
 }
 .dropdown .a{
-  // float: right;
-  // font-size: 100%;
   color: white;
   font-size:0.9em;
 }
 .dropdown .dropbtn {
   border: none;
   outline: none;
-  // color: white;
   font-family: inherit;
-  // margin-right: 8px;
-  // border-radius: 16px;
-  // min-width: 38px;
   background-color: transparent;
-  // padding: 7px 9px;
-  // right: 0px;
 }
 
 
@@ -227,32 +189,10 @@ cursor: pointer;
 border-bottom: 1px solid grey;
 }
 
-// .dropdown-link:hover {
-// background-color: rgb(153, 146, 146);
-
-// }
-
-
 .dropdown:hover .dropdown-content {
 display: block;
 position: absolute;
 }
-// .dropdown-list {
-//   line-height: 1;
-//   font-family: ProximaNova,Helvetica,sans-serif;
-
-//   -webkit-text-size-adjust: none;
-//   -webkit-tap-highlight-color: rgba(0,0,0,0);
-//   margin: 0;
-//   padding: 0;
-//   border: 0;
-//   outline: 0;
-//   font-size: 100%;
-//   vertical-align: baseline;
-//   background: transparent;
-//   list-style: none;
-//   position: relative;
-// }
 
 .profile-img {
       line-height: 1;
