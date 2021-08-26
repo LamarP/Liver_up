@@ -24,15 +24,36 @@ class DrinkDetail extends React.Component{
   render() {
     if (!this.props.drink) return null;
     const sessionId = this.props.sessionId;
-    const drink = this.props.drink;
     const drinkId = parseInt(this.props.match.params.drinkId);
-    const checkIns = this.props.checkIns;
     const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === drinkId);
     const total = checkIn_arr.length ? checkIn_arr.length : 0;
+    let numRatings = 0;
+    let ratingTotal = 0;
+    const ratingCount = checkIn_arr.forEach(checkin => {
+      if (checkin.rating) {
+         ratingTotal += checkin.rating;
+         numRatings++;
+      }
+    });
+    const average_rating = ratingTotal > 0 ? (ratingTotal / numRatings).toFixed() : 0;
     const uniqueHash = {};
     const youHash = {};
-    const userCheckIns = {}
-    console.log(this.props);
+    let drunks_arr = [];
+    let r = average_rating;
+    if (r === 1) {
+      drunks_arr.push (window.oneDrunk);
+    } else if(r === 2) {
+      drunks_arr.push (window.twoDrunks);
+    } else if (r === 3) {
+      drunks_arr.push (window.threeDrunks);
+    } else if (r === 4) {
+      drunks_arr.push (window.fourDrunks);
+    } else if (r === 5) {
+      drunks_arr.push (window.fiveDrunks);
+    } else {
+      drunks_arr.push (window.zeroDrunks);
+    }
+    let drunks = drunks_arr[0];
     const uniqueCount = checkIn_arr.length ? checkIn_arr.forEach(checkin => {
       if (!uniqueHash[checkin.drink_id]) uniqueHash[checkin.drink_id] = 0;
       uniqueHash[checkin.drink_id]++;
@@ -91,16 +112,8 @@ class DrinkDetail extends React.Component{
                 <p className="abv">{this.props.drink.abv} ABV</p>
                 <p className="ibu">12 ibu</p>
                 {/* <p>{this.props.drink.average_rating || 'No reviews yet'}</p> */}
-               
-                <div className="caps" data-rating="3.47423">
-                <div className="cap-100"></div>
-                <div className="cap-100"></div>
-                <div className="cap-100"></div>
-                <div className="cap-50"></div>
-                <div className="cap"></div>
-                </div>
-                <span className="num">(3.47)</span>
-                <p className="ratings">2,788 Ratings </p>
+                <span className="average-rating"><img className="rating_img" src={drunks} />({average_rating})</span>
+                <p className="ratings">{ratingTotal} Ratings</p>
           </div>
           <div className="bottom">
                 <div className="actions">

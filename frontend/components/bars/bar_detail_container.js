@@ -7,7 +7,7 @@ import { openModal } from '../../actions/modal_actions';
 const mapStateToProps = (state, ownProps) => {
   
   return {
-
+    drinks: state.entities.drinks,
     drink: state.entities.drinks[ownProps.match.params.drinkId],
     bar: state.entities.bars[ownProps.match.params.barId],
     checkIns: state.entities.checkIns
@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => {
     fetchDrink: (drinkId) => dispatch(fetchDrink(drinkId)),
     fetchAllDrinks: (drinks) => dispatch(fetchAllDrinks(drinks)),
     fetchAllBars: () => dispatch(fetchAllBars()),
-    fetchBar: (barId) => dispatch(fetchBar),
+    fetchBar: (barId) => dispatch(fetchBar(barId)),
     openModal: modal => dispatch(openModal(modal)),
     fetchCheckIns: () => dispatch(fetchCheckIns()),
     fetchCheckIn: (checkInId) => dispatch(fetchCheckIn(checkInId)),

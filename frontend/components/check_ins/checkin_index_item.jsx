@@ -11,19 +11,6 @@ class CheckinIndexItem extends React.Component {
     this.deleteCheckIn = this.deleteCheckIn.bind(this);
 
   }
-  // componentDidMount() {
-  //   this.props.fetchDrink(this.props.match.params.drinkId)
-  //   this.props.fetchCheckIns()
-  // }
-  
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.match.params.drinkId !== this.props.match.params.drinkId) {
-  //     this.props.fetchDrink(this.props.match.params.drinkId)
-  //   }
-  //   if (prevProps.match.params.checkInId !== this.props.match.params.checkInId) {
-  //     this.props.fetchCheckIn(this.props.match.params.checkInId)
-  //   }
-  // }
 
   deleteCheckIn(e) {
     e.preventDefault();
@@ -36,7 +23,6 @@ class CheckinIndexItem extends React.Component {
 
     const {checkIn, sessionId} = this.props;
     const showDelete = checkIn.author_id === sessionId ? "show-delete" : "hide-delete"
-    const rating = this.props.checkIn.rating;
     let drunks_arr = [];
     let r = this.props.checkIn.rating;
     if (r === 1) {
@@ -53,10 +39,6 @@ class CheckinIndexItem extends React.Component {
       drunks_arr.push (window.zeroDrunks);
     }
     let drunks = drunks_arr[0];
-    console.log(drunks);
-     
-
- 
     return (
       <div className="checkin-index-item">
         <div className="checkin-item-row-1">
@@ -72,7 +54,7 @@ class CheckinIndexItem extends React.Component {
           <div className="checkin-body">
           {checkIn.authorName } says: <p>{ checkIn.body}</p>
             <div className="checkin-body-bottom"> 
-            <img className="rating_img" src={drunks} width='30%' height="auto" />
+            <img className="check-rating-img" src={drunks} width='30%' height="auto" />
              </div>
           </div>
         </div>

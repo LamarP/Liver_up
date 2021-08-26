@@ -13,5 +13,8 @@
     json.barName checkin.drink.bar.name
     json.authorId checkin.author_id
     json.authorName checkin.author.username
+    if checkin.photo.attached?
+      json.photoURL url_for(checkin.photo)
+    end
   end
 end

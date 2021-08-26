@@ -28,14 +28,14 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(fas, fab);
 const App = () => (
-  <div>
+  <div className="test">
       
     <Modal />
     <NavBarContainer />
-    <div>
+
 
     <GreetingContainer/>
-    </div>
+
     <Switch> 
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />

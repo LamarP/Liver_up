@@ -14,7 +14,7 @@ Bar.delete_all
 # b5
 bars = {
   '1' => {
-    "name" => "Paddy/'s Pub", "location" => 'Philadelphia, Pennsylvania', "style" => 'Irish Pub', "img_url" => "paddy/'s.jpeg"
+    "name" => "Paddy/'s Pub", "location" => 'Philadelphia, Pennsylvania', "style" => 'Irish Pub', "img_url" => "paddys.jpeg"
   },
   '2' => {
     "name" => "Moe/'s Tavern", "location" => 'Springfield, Oregon', "style" => 'Dive bar', "img_url" => 'moes.jpeg'

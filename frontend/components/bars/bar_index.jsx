@@ -14,21 +14,25 @@ class BarIndex extends React.Component{
   render() {
     const { bars } = this.props;
     const bar_arr = Object.values(bars);
-    
-    return (
-      <div className="bars">
-          <Route path="/bars/:barId" component={BarDetailContainer}/>
-        <ul>
-          {
-             bar_arr.map((bar) => (
-            <BarIndexItem
-            key={`bar${bar.id}`}
-                 bar={bar} /> 
-            ))
-          }
-        </ul>   
-      </div>
-    )
+    if (bar_arr.length !== 0) {
+      return (
+        <div className="bars">
+            <Route path="/bars/:barId" component={BarDetailContainer}/>
+          <ul>
+            {
+               bar_arr.map((bar) => (
+              <BarIndexItem
+              key={`bar${bar.id}`}
+                   bar={bar} /> 
+              ))
+            }
+          </ul>   
+        </div>
+      )
+
+    } else {
+      return null;
+    }
   }
 }
 

@@ -21,6 +21,6 @@ class Api::BarsController < ApplicationController
 
     private
     def bar_params
-        params.require(:bar).permit(:name, :style, :location)
+        params.require(:bar).permit(:name, :style, :location, :img_url,)
     end
 end
