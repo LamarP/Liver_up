@@ -1,5 +1,20 @@
 
- 
+  .entrance {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    // width: 100%;
+    object-fit: cover;
+    
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+  }
   .buttons {
     display: flex;
     justify-content: flex-end;
@@ -37,4 +52,123 @@
   background-color: white;
   color: black;
   cursor: pointer;
+}
+.logo-box {
+  width: 21%;
+  display: flex;
+  margin-top: 125px;
+  margin-left: 360px;
+}
+.logo-box-img{
+  -webkit-text-size-adjust: 100%;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0a0a0a;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  font-family: ProximaNova,Helvetica,sans-serif!important;
+  margin: 0;
+  padding: 0;
+  // margin-top: -40px;
+  margin-left: 40px;
+  margin-bottom: 14px;
+  text-align: center;
+  width: 250px;
+  height: 220px;
+}
+
+.front-name {
+  text-decoration: none;
+  color: white;
+  font-size: 75px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 540;
+  display: flex;
+  font-style: normal;
+  line-height: 32px;
+  margin-top: 150px;
+  margin-block-end: 10px;
+  margin-block-start: 0px;
+  margin-bottom: 46px;
+  text-align: center;
+  justify-content: center;
+}
+
+.front-slogan {
+  -webkit-text-size-adjust: 100%;
+  text-align: center;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 250;
+  line-height: 1em;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-right: 11px;
+}
+
+.liver-up-front {
+  // width: 284px;
+  width: 100%;
+}
+
+.short-rule {
+  display: flex;
+  -webkit-text-size-adjust: 100%;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0a0a0a;
+  text-align: center;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  font-family: ProximaNova,Helvetica,sans-serif!important;
+  padding: 0;
+  background: #ffc000;
+  height: 4px;
+  width: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 458px;
+  // margin-right: 20px;
+}
+
+.discover {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 540;
+  display: flex;
+  font-style: normal;
+  line-height: 32px;
+  margin-top: 150px;
+  margin-block-end: 10px;
+  margin-block-start: 0px;
+  margin-bottom: 16px;
+  margin-right: 382px;
+  text-align: center;
+  justify-content: center;
+}
+.discover-2 {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 540;
+  display: flex;
+  font-style: normal;
+  line-height: 32px;
+  margin-top: 150px;
+  margin-block-end: 10px;
+  margin-block-start: 0px;
+  margin-bottom: 46px;
+  margin-right: 382px;
+  text-align: center;
+  justify-content: center;
 }

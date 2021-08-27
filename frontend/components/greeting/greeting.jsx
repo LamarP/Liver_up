@@ -16,12 +16,25 @@ const Greeting = ({ currentUser, logout }) => {
           &nbsp;&nbsp;
           <Link to="/signup">create an account</Link>
         </div>
-          <div className="background-img">
+          <div className="background-img-container">
             <img className="background-img" src={window.bg_image}alt="background image" />
         </div>
       </div>
-        {/* <div className="overlay"></div> */}
+      <div className="logo-box">
+        <div className="liver-up-front">
+        <img  className="logo-box-img"src={window.buds} alt="" />
+
+            <h1 className="front-name">Liver_up</h1>
+              <h3 className="front-slogan">Drink Socially (or alone)</h3>
+
+            </div>
+
+      </div>
+      <div className="short-rule"></div>
+      <div className="discover">Discover and share your</div>
+      <div className="discover-2">inner demons</div>
     </div>
+
   );
   const personalGreeting = () => (
     <div>
