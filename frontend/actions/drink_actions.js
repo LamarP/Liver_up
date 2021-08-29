@@ -9,23 +9,11 @@ export const receiveAllDrinks = drinks => ({
   drinks
 })
 
-export const receiveDrink = drink => ({
+export const receiveDrink = payload => ({
   type: RECEIVE_DRINK,
-  drink
+  payload
 })
 
-// export const receiveReview = ({ review, average_rating, author }) => ({
-//   type: RECEIVE_REVIEW,
-//   review,
-//   average_rating,
-//   author,
-// });
-
-// export const createReview = review => dispatch => (
-//   APIUtil.createReview(review).then(review => (
-//     dispatch(receiveReview(review))
-//   ))
-// );
 
 export const fetchAllDrinks = () => dispatch =>(
     DrinkAPIUtil.fetchAllDrinks()
@@ -34,7 +22,7 @@ export const fetchAllDrinks = () => dispatch =>(
 
 export const fetchDrink = drink_id => dispatch =>(
     DrinkAPIUtil.fetchDrink(drink_id)
-    .then(drink => dispatch(receiveDrink(drink)))
+    .then(payload => dispatch(receiveDrink(payload)))
 )
 
 

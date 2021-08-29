@@ -19,7 +19,6 @@ export const createCheckIn = checkin => {
       method: "POST",
       url: "/api/check_ins",
     data: {checkin},
-
   });
 };
 

@@ -141,6 +141,7 @@ input[type="file"] {
   height: 60px;
   background-color: black;
   margin-left: 60px;
+  border-radius: 5px;
 }
 .camera {
   width: 100%;
@@ -169,3 +170,29 @@ input[type="file"] {
   cursor: pointer;
 }
   
+.checkin-form-button {
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  position: relative;
+  text-rendering: auto;
+  color: white;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  cursor: pointer;
+  background-color: black;
+  box-sizing: border-box;
+  font: 18px proximaNova, helvetica, sans-serif;
+  padding: 1px 7px;
+  border-width: 1px;
+  border-radius: 5px;
+  width: 120px;
+  height:40px;
+  border:0px transparent; 
+  margin-bottom: 5%;
+  margin-left: 61%;
+  margin-right: 7%;
+  margin-top: -7%;
+}

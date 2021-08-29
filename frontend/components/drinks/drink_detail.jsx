@@ -22,11 +22,13 @@ class DrinkDetail extends React.Component{
   
 
   render() {
+    // debugger
     if (!this.props.drink) return null;
-    const sessionId = this.props.sessionId;
+    
     const drinkId = parseInt(this.props.match.params.drinkId);
     const checkIn_arr = Object.values(this.props.checkIns).filter(checkIn => checkIn.drink_id === drinkId);
     const total = checkIn_arr.length ? checkIn_arr.length : 0;
+    const { bar, sessionId } = this.props;
     let numRatings = 0;
     let ratingTotal = 0;
     const ratingCount = checkIn_arr.forEach(checkin => {
@@ -35,7 +37,8 @@ class DrinkDetail extends React.Component{
          numRatings++;
       }
     });
-    const average_rating = ratingTotal > 0 ? (ratingTotal / numRatings).toFixed() : 0;
+
+    const average_rating = ratingTotal > 0 ? (ratingTotal / numRatings) : 0;
     const uniqueHash = {};
     const youHash = {};
     let drunks_arr = [];
@@ -83,7 +86,7 @@ class DrinkDetail extends React.Component{
             </a>
             <div className="name">
                     <h1>{this.props.drink.drink_name}</h1>
-                    <p className="bar-name">placeholder</p>
+                    <p className="bar-name">{bar.name}</p>
                     <p className="drink-type-show">{this.props.drink.drink_style}</p>  
             </div>
           </div>

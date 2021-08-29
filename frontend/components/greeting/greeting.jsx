@@ -22,7 +22,10 @@ const Greeting = ({ currentUser, logout }) => {
       </div>
       <div className="logo-box">
         <div className="liver-up-front">
+          <div className="logo-img-container">
         <img  className="logo-box-img"src={window.buds} alt="" />
+
+          </div>
 
             <h1 className="front-name">Liver_up</h1>
               <h3 className="front-slogan">Drink Socially (or alone)</h3>
@@ -30,7 +33,9 @@ const Greeting = ({ currentUser, logout }) => {
             </div>
 
       </div>
+      <div className="short-rule-container">
       <div className="short-rule"></div>
+      </div>
       <div className="discover">Discover and share your</div>
       <div className="discover-2">inner demons</div>
     </div>

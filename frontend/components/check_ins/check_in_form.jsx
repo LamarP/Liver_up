@@ -20,14 +20,6 @@ class CheckInForm extends React.Component {
     const url = `/drinks/${this.props.match.params.drinkId}`
     this.props.history.push(url);
   }
-  
-  update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
-  }
- 
-
   handleFile(e) {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
@@ -39,20 +31,33 @@ class CheckInForm extends React.Component {
       fileReader.readAsDataURL(file);
     }
   }
+  
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
+ 
+
 
 
   handleSubmit(e) {
     e.preventDefault();
     const drinkId = parseInt(this.props.location.pathname.split('/')[2]);
     const authorId = this.props.authorId;
+    const photoFile = this.props.photoFile;
+    const photoUrl = this.props.photoUrl;
     const checkIn = Object.assign({}, this.state, {
       drink_id: drinkId,
-      author_id: authorId
+      author_id: authorId,
+      photoFile: photoFile,
+      photoUrl: photoUrl
     });
     this.props.createCheckIn(checkIn);
     this.props.closeModal();
     this.props.history.push('/thedive');
   }
+
 
   update(property) {
     return e => this.setState({ [property]: e.currentTarget.value });
@@ -80,13 +85,6 @@ class CheckInForm extends React.Component {
         <form onSubmit={this.handleSubmit} >
           <br/>
 
-          {/* <textarea
-            cols="30"
-            rows="10"
-            value={this.state.body}
-            onChange={this.update("body")}
-            className="checkin-comment"  
-          /> */}
             <div className="check-form-middle">
             <div className="checkin-comment-box">
                   <input className="checkin-comment"
@@ -129,7 +127,7 @@ class CheckInForm extends React.Component {
           <br/>
 
           <br/>
-          <input type="submit" />
+          <input className="checkin-form-button"type="submit" />
         </form>
       </div>
 

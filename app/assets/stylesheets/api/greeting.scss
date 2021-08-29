@@ -6,7 +6,8 @@
     background-size: cover;
     // width: 100%;
     object-fit: cover;
-    
+    display: flex;
+    flex-direction: column;
     z-index: 1;
     height: 100%;
     width: 100%;
@@ -54,10 +55,13 @@
   cursor: pointer;
 }
 .logo-box {
-  width: 21%;
+  width: 100%;
   display: flex;
-  margin-top: 125px;
-  margin-left: 360px;
+  margin-top: 15%;
+}
+.logo-img-container {
+  display: flex;
+  justify-content: center;
 }
 .logo-box-img{
   -webkit-text-size-adjust: 100%;
@@ -71,7 +75,6 @@
   margin: 0;
   padding: 0;
   // margin-top: -40px;
-  margin-left: 40px;
   margin-bottom: 14px;
   text-align: center;
   width: 250px;
@@ -116,9 +119,12 @@
   // width: 284px;
   width: 100%;
 }
-
-.short-rule {
+.short-rule-container {
   display: flex;
+  justify-content: center;
+  
+}
+.short-rule {
   -webkit-text-size-adjust: 100%;
   font-size: 100%;
   font-weight: 400;
@@ -134,8 +140,6 @@
   width: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 458px;
-  // margin-right: 20px;
 }
 
 .discover {
@@ -151,7 +155,6 @@
   margin-block-end: 10px;
   margin-block-start: 0px;
   margin-bottom: 16px;
-  margin-right: 382px;
   text-align: center;
   justify-content: center;
 }
@@ -168,7 +171,6 @@
   margin-block-end: 10px;
   margin-block-start: 0px;
   margin-bottom: 46px;
-  margin-right: 382px;
   text-align: center;
   justify-content: center;
 }

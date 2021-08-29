@@ -39,7 +39,7 @@ bars.map do |num, details|
  )
 end
 demo = User.create!(
-  username: 'guest',
+  username: 'Handsome Devil',
   password: 'password',
   email: 'guest',
   id: 7
