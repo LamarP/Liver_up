@@ -38,7 +38,7 @@ class DrinkDetail extends React.Component{
       }
     });
 
-    const average_rating = ratingTotal > 0 ? (ratingTotal / numRatings) : 0;
+    const average_rating = ratingTotal > 0 ? Math.floor(ratingTotal / numRatings) : 0;
     const uniqueHash = {};
     const youHash = {};
     let drunks_arr = [];
