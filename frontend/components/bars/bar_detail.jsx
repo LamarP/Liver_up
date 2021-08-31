@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link, Route } from 'react-router-dom';
 import CheckinIndexItem from "../check_ins/checkin_index_item";
 import DrinkIndexItem from "../drinks/drink_index_item";
 class BarDetail extends React.Component {
@@ -30,12 +29,12 @@ class BarDetail extends React.Component {
       (checkIn) => checkIn.barId === this.props.bar.id
     );
     const { drinks } = this.props;
-    const drink_arr = Object.values(drinks).filter(drink => drink.bar_id === this.props.bar.id);
-    console.log(drink_arr);
+    const drink_arr = Object.values(drinks).filter(
+      (drink) => drink.bar_id === this.props.bar.id
+    );
     return (
       <div id="slide">
         <div className="bar-header">
-          {/* <img className="bar-image" src={this.props.bar.img_url} alt={this.props.bar.name}  /> */}
           <div className="bar-header-intro">
             <div className="bar-show-details">
               <h1 className="bar-show-name">{this.props.bar.name}</h1>
@@ -45,46 +44,34 @@ class BarDetail extends React.Component {
           </div>
         </div>
         <div className="cont-bar-page">
-
           <div className="bar-details-left">
-                <h3 className="drink-menu">Drink Menu</h3>
-                <div className="bar-drinks">
-                <ul>
-          {
-             drink_arr.map((drink) => (
-            <DrinkIndexItem
-            key={`drink${drink.id}`}
-                 drink={drink} />
-               
-            ))
-          }
-        </ul>
-                </div>
-              </div>
-              <div className="bar-checkins">
-              <h3 className="global-recent-activity">Recent Activity</h3>
-                {" "}
-                <ul>
-                  {checkIn_arr.map((checkIn) => (
-                    <CheckinIndexItem
-                      key={`checkIn${checkIn.id}`}
-                      checkIn={checkIn}
-                      checkInId={checkIn.id}
-                      sessionId={this.props.sessionId}
-                      deleteCheckIn={this.props.deleteCheckIn}
-                      fetchUser={
-                        this.props.fetchUser ? this.props.fetchUser : ""
-                      }
-                      profileId={
-                        this.props.profileId ? this.props.profileId : ""
-                      }
-                    />
-                  ))}
-                </ul>
-              </div>
+            <h3 className="drink-menu">Drink Menu</h3>
+            <div className="bar-drinks">
+              <ul>
+                {drink_arr.map((drink) => (
+                  <DrinkIndexItem key={`drink${drink.id}`} drink={drink} />
+                ))}
+              </ul>
             </div>
           </div>
-
+          <div className="bar-checkins">
+            <h3 className="global-recent-activity">Recent Activity</h3>{" "}
+            <ul>
+              {checkIn_arr.map((checkIn) => (
+                <CheckinIndexItem
+                  key={`checkIn${checkIn.id}`}
+                  checkIn={checkIn}
+                  checkInId={checkIn.id}
+                  sessionId={this.props.sessionId}
+                  deleteCheckIn={this.props.deleteCheckIn}
+                  fetchUser={this.props.fetchUser ? this.props.fetchUser : ""}
+                  profileId={this.props.profileId ? this.props.profileId : ""}
+                />
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
     );
   }
 }

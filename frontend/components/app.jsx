@@ -20,7 +20,6 @@ import CheckInShowContainer from './check_ins/check_in_show_container';
 import NavBarContainer from './nav/navbar_container';
 import ProfileContainer from './profile/profile_container';
 import CheckinIndexContainer from './check_ins/checkin_index_container';
-// import Home from './home';
 import Modal from './modal/modal';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -46,7 +45,7 @@ const App = () => (
       <ProtectedRoute exact path='/bars/:barId' component={BarDetailContainer}/>
       <ProtectedRoute exact path="/checkIns/:checkInId" component={CheckInShowContainer} /> 
       <ProtectedRoute exact path='/profiles/:profileId' component={ProfileContainer}/>
-       {/* <ProtectedRoute exact path="/checkIns/:checkInId/edit" component={EditCheckInContainer} /> */}
+
 
       
     </Switch>

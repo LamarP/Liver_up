@@ -1,23 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: '',
-      email: '',
+      username: "",
+      password: "",
+      email: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemoUser = this.handleDemoUser.bind(this);
   }
   componentDidMount() {
-    this.props.clearErrors()
+    this.props.clearErrors();
   }
   update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+    return (e) =>
+      this.setState({
+        [field]: e.currentTarget.value,
+      });
   }
 
   handleSubmit(e) {
@@ -28,17 +29,18 @@ class SessionForm extends React.Component {
 
   handleDemoUser(e) {
     e.preventDefault();
-    const demoUser = Object.assign({}, {   username: 'Handsome Devil', password: 'password', email: 'guest' });
+    const demoUser = Object.assign(
+      {},
+      { username: "Handsome Devil", password: "password", email: "guest" }
+    );
     this.props.processForm(demoUser);
   }
 
   renderErrors() {
-    return(
+    return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
+          <li key={`error-${i}`}>{error}</li>
         ))}
       </ul>
     );
@@ -47,60 +49,66 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div>
-      <div className="login-form-container">
-       
+        <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <div className="liver-up">
-          <Link to="/" className="header-link">
-            <h1>Liver_up</h1>
-          </Link>
+              <Link to="/" className="header-link">
+                <h1>Liver_up</h1>
+              </Link>
             </div>
             <div className="slogan">
               <h3>Drink Socially(or alone)</h3>
             </div>
-          <br />
-          {this.renderErrors()}
-          <div className="login-form">
-            <br/>
-           
-              <input className="username"
-                  type="text"
-                  placeholder="Username"
-                  value={this.state.username}
-                  onChange={this.update('username')}
-                  />
-          
-            <br/>
-              <input className="email"
-                  type="text"
-                  placeholder="Email"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  />
-            <br/>
-              <input className="password"
-                  type="password"
-                  value={this.state.password}
-                  placeholder="Password"
-                  onChange={this.update('password')}
-                  />
-              <br/>
+            <br />
+            {this.renderErrors()}
+            <div className="login-form">
+              <br />
+
+              <input
+                className="username"
+                type="text"
+                placeholder="Username"
+                value={this.state.username}
+                onChange={this.update("username")}
+              />
+
+              <br />
+              <input
+                className="email"
+                type="text"
+                placeholder="Email"
+                value={this.state.email}
+                onChange={this.update("email")}
+              />
+              <br />
+              <input
+                className="password"
+                type="password"
+                value={this.state.password}
+                placeholder="Password"
+                onChange={this.update("password")}
+              />
+              <br />
               <span className="button yellow submit-btn">
-                <input className="session-submit" type="submit" value={this.props.formType} />
+                <input
+                  className="session-submit"
+                  type="submit"
+                  value={this.props.formType}
+                />
               </span>
-              <br/>
+              <br />
               <button
                 className="demo-login-button"
-                onClick={this.handleDemoUser}>Secret Entrance</button>
-              
-          </div>
-            <ul className="nav-link">
-                  New around here? {this.props.navLink}
-            </ul>
-        </form>
-          </div>
-            
-          <div className="overlay"></div>
+                onClick={this.handleDemoUser}
+              >
+                Secret Entrance
+              </button>
+            </div>
+            <ul className="nav-link">New around here? {this.props.navLink}</ul>
+          </form>
+        </div>
+
+        <div className="overlay"></div>
       </div>
     );
   }

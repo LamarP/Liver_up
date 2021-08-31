@@ -1,40 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-class DrinkIndexItem extends React.Component{
-  constructor(props){
+class DrinkIndexItem extends React.Component {
+  constructor(props) {
     super(props);
   }
-  
-  
-  render(){
-    var Rating = require('react-rating');
+
+  render() {
+    var Rating = require("react-rating");
     return (
       <div>
         <ul>
-      <li className="drink-index-item">
-        <Link to={`/drinks/${this.props.drink.id}`}>
-          {/* <img src={this.props.drink.img_url}/> */}
-          
-          <span className="drink-name">{this.props.drink.drink_name}</span>
-        </Link>
-          
-          
-          <span className="drink-style">{this.props.drink.drink_style} - {this.props.drink.base_spirit} based </span>
-        
-        <span className="drink-description">{this.props.drink.description}</span>
-        
-        </li>
+          <li className="drink-index-item">
+            <Link to={`/drinks/${this.props.drink.id}`}>
+              <span className="drink-name">{this.props.drink.drink_name}</span>
+            </Link>
 
-        </ul>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+            <span className="drink-style">
+              {this.props.drink.drink_style} - {this.props.drink.base_spirit}{" "}
+              based{" "}
+            </span>
 
+            <span className="drink-description">
+              {this.props.drink.description}
+            </span>
+          </li>
+        </ul>
       </div>
-    )
+    );
   }
 }
 

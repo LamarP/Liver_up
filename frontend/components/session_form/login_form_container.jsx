@@ -1,39 +1,27 @@
-import { connect } from 'react-redux';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { login } from '../../actions/session_actions';
-import SessionForm from './session_form';
-import { clearSessionErrors } from '../../actions/session_actions'
-import { openModal, closeModal } from '../../actions/modal_actions';
-// import {demoLogin} from '../../actions/session_actions'
+import { connect } from "react-redux";
+import React from "react";
+import { Link } from "react-router-dom";
+import { login } from "../../actions/session_actions";
+import SessionForm from "./session_form";
+import { clearSessionErrors } from "../../actions/session_actions";
+import { openModal, closeModal } from "../../actions/modal_actions";
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
-    formType: 'login',
+    formType: "login",
     navLink: <Link to="/signup">Sign up!</Link>,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     processForm: (user) => dispatch(login(user)),
     otherForm: (
-      <button onClick={() => dispatch(openModal('signup'))}>
-        Signup
-      </button>
+      <button onClick={() => dispatch(openModal("signup"))}>Signup</button>
     ),
     clearErrors: () => dispatch(clearSessionErrors()),
-    closeModal: () => dispatch(closeModal())
-
-   
+    closeModal: () => dispatch(closeModal()),
   };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
-
-
-
-
-
-
-

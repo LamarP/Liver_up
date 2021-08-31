@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import React from 'react';
 import BarIndex from './bar_index';
 import { fetchAllBars } from '../../actions/bar_actions';
 

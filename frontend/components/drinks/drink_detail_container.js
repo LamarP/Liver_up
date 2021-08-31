@@ -11,7 +11,6 @@ const mapStateToProps = (state, ownProps) => {
   if (drink) {
     bar = state.entities.bars[drink.bar_id]
   }
-  // debugger
   return {
     drink: drink,
     checkIns: state.entities.checkIns,

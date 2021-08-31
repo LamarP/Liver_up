@@ -61,8 +61,6 @@ class CheckinIndexItem extends React.Component {
         <div className="checkin-item-row-3">
           <div className="checkin-image-container"><img className="checkin-image" src={checkIn.photoUrl}/></div>
           <div className="checkin-item-links">
-
-            {/* <Link to={`/check_ins/${checkIn.id}`}>View Detailed Check-in</Link> */}
             <div>
               <Link className={showDelete} to={`/check_ins`} onClick={this.deleteCheckIn}>Delete Check-in</Link>
             </div>
