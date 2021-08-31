@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link, Route } from 'react-router-dom';
 import CheckinIndexItem from '../check_ins/checkin_index_item';
 class DrinkDetail extends React.Component{
   constructor(props) {
@@ -22,7 +21,6 @@ class DrinkDetail extends React.Component{
   
 
   render() {
-    // debugger
     if (!this.props.drink) return null;
     
     const drinkId = parseInt(this.props.match.params.drinkId);
@@ -77,7 +75,7 @@ class DrinkDetail extends React.Component{
 
       <div className="box-drink-page">
 
-<div className="content">
+<div className="drink-show-cont">
 
     <div className="top">
           <div className="basic">
