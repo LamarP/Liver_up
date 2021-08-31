@@ -10,8 +10,5 @@ class CheckIn < ApplicationRecord
   class_name: :User
 
   has_one_attached :photo
-  # has_many :comments,
-  # foreign_key: :checkin_id,
-  # class_name: :Comment,
-  # dependent: :destroy
+
 end

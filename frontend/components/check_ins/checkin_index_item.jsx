@@ -20,7 +20,6 @@ class CheckinIndexItem extends React.Component {
  
 
   render() {
-
     const {checkIn, sessionId} = this.props;
     const showDelete = checkIn.author_id === sessionId ? "show-delete" : "hide-delete"
     let drunks_arr = [];
@@ -43,6 +42,7 @@ class CheckinIndexItem extends React.Component {
       <div className="checkin-index-item">
         <div className="checkin-item-row-1">
         <div><img className="profile-pic" src={window.profile}alt="" /></div>
+        {/* <div><img className="profile-pic" src={checkIn.author.img_url}alt={window.profile} /></div> */}
           <p className="text">
             {checkIn.authorName} is drowning in an
             <Link to={`/profiles/${checkIn.author}`}></Link>
