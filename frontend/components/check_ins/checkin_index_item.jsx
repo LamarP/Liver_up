@@ -55,11 +55,11 @@ class CheckinIndexItem extends React.Component {
           {checkIn.authorName } says: <p>{ checkIn.body}</p>
             <div className="checkin-body-bottom"> 
             <img className="check-rating-img" src={drunks} width='30%' height="auto" />
+            <img className="checkin-image" src={checkIn.photoURL} alt=""/>
              </div>
           </div>
         </div>
         <div className="checkin-item-row-3">
-          <div className="checkin-image-container"><img className="checkin-image" src={checkIn.photoURL}/></div>
           <div className="checkin-item-links">
             <div>
               <Link className={showDelete} to={`/check_ins`} onClick={this.deleteCheckIn}>Delete Check-in</Link>

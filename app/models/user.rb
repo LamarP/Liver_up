@@ -13,6 +13,8 @@ class User < ApplicationRecord
   has_many :drinks,
   through: :check_ins
 
+  has_one_attached :photo
+
   after_initialize :ensure_session_token!
 
   def self.find_by_credentials(username, password)
