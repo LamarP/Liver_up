@@ -40,17 +40,15 @@ class CheckInForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const drinkId = parseInt(this.props.location.pathname.split("/")[2]);
-    const authorId = this.props.authorId;
-    const photoFile = this.props.photoFile;
-    const photoUrl = this.props.photoUrl;
-    const checkIn = Object.assign({}, this.state, {
-      drink_id: drinkId,
-      author_id: authorId,
-      photoFile: photoFile,
-      photoUrl: photoUrl,
-    });
-    this.props.createCheckIn(checkIn);
+    const formData = new FormData();
+    formData.append('checkin[rating]', this.state.rating);
+    formData.append('checkin[body]', this.state.body);
+    formData.append('checkin[drink_id]', this.state.drink_id);
+    formData.append('checkin[author_id]', this.state.author_id);
+    if (this.state.photoFile) {
+      formData.append('checkin[photo]', this.state.photoFile);
+    }
+    this.props.createCheckIn(formData);
     this.props.closeModal();
     this.props.history.push("/thedive");
   }

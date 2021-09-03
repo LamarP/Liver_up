@@ -92,7 +92,7 @@ class DrinkDetail extends React.Component {
                     </a>
                     <div className="name">
                       <h1>{this.props.drink.drink_name}</h1>
-                      <p className="bar-name">{bar.name}</p>
+                      <p className="bar-name">{this.props.bar.name}</p>
                       <p className="drink-type-show">
                         {this.props.drink.drink_style}
                       </p>
