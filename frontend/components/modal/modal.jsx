@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import CheckInFormContainer from '../check_ins/check_in_form_container'
-function Modal({modal, closeModal}) {
+function Modal({ modal, closeModal }) {
+
   if (!modal) {
     return null;
   }
@@ -14,6 +15,7 @@ function Modal({modal, closeModal}) {
       component = <CheckInFormContainer drinkId={modal[1]} />;
       break;
     case 'login':
+      console.log("ahhhhhhh");
       component = <LoginFormContainer />;
       break;
     case 'signup':
@@ -22,6 +24,7 @@ function Modal({modal, closeModal}) {
     default:
       return null;
   }
+  console.log(component);
   return (
     <div className="modal-background" onClick={closeModal}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>

@@ -10,8 +10,17 @@ class DrinkIndexItem extends React.Component {
     var Rating = require("react-rating");
     return (
       <div>
-        <ul>
-          <li className="drink-index-item">
+        <div className="index-items">
+        <a className="label">
+                      <img
+                        className="index-image"
+                        src={this.props.drink.img_url}
+                        alt={this.props.drink.drink_name}
+                        // width="30%"
+                        // height="auto"
+                      />
+                    </a>
+          <div className="drink-index-item">
             <Link to={`/drinks/${this.props.drink.id}`}>
               <span className="drink-name">{this.props.drink.drink_name}</span>
             </Link>
@@ -21,11 +30,11 @@ class DrinkIndexItem extends React.Component {
               based{" "}
             </span>
 
-            <span className="drink-description">
+            {/* <span className="drink-description">
               {this.props.drink.description}
-            </span>
-          </li>
-        </ul>
+            </span> */}
+          </div>
+        </div>
       </div>
     );
   }

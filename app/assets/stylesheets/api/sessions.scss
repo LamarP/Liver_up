@@ -24,10 +24,23 @@
 }
 
 .header-content-container{
-  width: 1048px;
+  // width: 1048px;
+  // display: flex;
+  // align-items: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  object-fit: cover;
   display: flex;
-  align-items: center;
-  
+  flex-direction: column;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: auto;
+  top: 0px;
+  left: 0px;
 }
 
 .header-name {
@@ -305,7 +318,9 @@
   color: #8a4500;
   text-decoration: none;
 }
-
+.session-bg-container {
+  
+}
 
 
 
