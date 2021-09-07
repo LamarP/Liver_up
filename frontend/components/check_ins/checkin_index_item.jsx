@@ -38,6 +38,7 @@ class CheckinIndexItem extends React.Component {
       drunks_arr.push (window.zeroDrunks);
     }
     let drunks = drunks_arr[0];
+    let checkInImg = checkIn.photoURL ? checkIn.photoURL : window.buds;
     return (
       <div className="checkin-index-item">
         <div className="checkin-item-row-1">
@@ -55,7 +56,7 @@ class CheckinIndexItem extends React.Component {
           {checkIn.authorName } says: <p>{ checkIn.body}</p>
             <div className="checkin-body-bottom"> 
             <img className="check-rating-img" src={drunks} width='30%' height="auto" />
-            <img className="checkin-image" src={checkIn.photoURL} alt=""/>
+            <img className="checkin-image" src={checkInImg} alt={`an image of the drink `} />
              </div>
           </div>
         </div>

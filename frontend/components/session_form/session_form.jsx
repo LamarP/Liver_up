@@ -25,6 +25,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+    this.props.closeModal();
   }
 
   handleDemoUser(e) {
@@ -34,6 +35,7 @@ class SessionForm extends React.Component {
       { username: "Handsome Devil", password: "password", email: "guest" }
     );
     this.props.processForm(demoUser);
+    this.props.closeModal();
   }
 
   renderErrors() {
@@ -104,7 +106,7 @@ class SessionForm extends React.Component {
                 Secret Entrance
               </button>
             </div>
-            <ul className="nav-link">New around here? {this.props.navLink}</ul>
+            <ul className="nav-link">New around here? {this.props.otherForm}</ul>
           </form>
         </div>
 

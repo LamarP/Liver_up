@@ -1,9 +1,8 @@
-
 #slide {
   line-height: 1;
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
   border: 0;
@@ -17,16 +16,16 @@
 
 .cont-drink-page {
   line-height: 1;
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   border: 0;
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
-  max-width: 1048px;
+  max-width: 800px;
   width: 100%;
   margin: 28px auto 64px;
   padding: 0 12px;
@@ -37,9 +36,9 @@
 
 .main {
   line-height: 1;
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   border: 0;
   outline: 0;
@@ -54,12 +53,11 @@
   padding: 0;
   min-height: 1022px;
 
-
   .box-drink-page {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     border: 0;
@@ -72,9 +70,9 @@
   }
   .drink-show-cont {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     border: 0;
     outline: 0;
@@ -83,17 +81,17 @@
     background: transparent;
     border-radius: 8px;
     background-color: #fff;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     padding: 16px;
     box-sizing: border-box;
     height: 100%;
   }
-  
+
   .top {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     border: 0;
@@ -104,12 +102,12 @@
     margin-bottom: 16px;
     position: relative;
   }
-  
+
   .basic {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     border: 0;
@@ -122,12 +120,12 @@
     width: 100%;
     padding-right: 0;
   }
-  
+
   .name {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     border: 0;
     outline: 0;
@@ -140,10 +138,10 @@
     padding: 4px 0 0;
     box-sizing: border-box;
   }
-  .name > h1{
-    font-family: ProximaNova,Helvetica,sans-serif;
+  .name > h1 {
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     border: 0;
@@ -156,13 +154,21 @@
     margin-bottom: 6px;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-bottom: 2px;
   }
 
   .drink-image {
+    display: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    // width: 100%;
+    object-fit: cover;
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     font-size: 100%;
@@ -175,12 +181,16 @@
     padding-right: 2%;
     width: 107%;
   }
-  
+
+  .drink-image[src] {
+    display: block;
+  }
+
   .bar-name {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     border: 0;
@@ -193,9 +203,9 @@
   }
   .drink-type-show {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     border: 0;
@@ -207,9 +217,9 @@
   }
   .stats {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     border: 0;
@@ -223,11 +233,11 @@
     top: 0;
     right: 0;
   }
-  .stats  p {
+  .stats p {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     border: 0;
     outline: 0;
@@ -244,10 +254,10 @@
   }
   .stat {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     color: #595959;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     border: 0;
@@ -257,309 +267,310 @@
     display: block;
     text-transform: uppercase;
     margin-bottom: 2px;
-    font-size: .7em;
+    font-size: 0.7em;
   }
-  .count {    line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+  .count {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
     color: #595959;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
     vertical-align: baseline;
     background: transparent;
-    font-size: 1.4em;}
-    .details {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      margin-top: 11px;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-      align-items: center;
-      display: flex;
-      width: 100%;
-      height: 100%;
-      margin-bottom: 16px;
-      border-top: 1px solid #e9e9e9;
-      border-bottom: 1px solid #e9e9e9;
-    }
-    .abv {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      border: 0;
-      outline: 0;
-      vertical-align: baseline;
-      background: transparent;
-      border-right: 1px solid #e9e9e9;
-      padding: 12px;
-      color: #595959;
-      text-align: center;
-      font-size: 1em;
-      flex: 1 1 0;
-    }
-    .ibu {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      border: 0;
-      outline: 0;
-      vertical-align: baseline;
-      background: transparent;
-      border-right: 1px solid #e9e9e9;
-      padding: 12px;
-      color: #595959;
-      text-align: center;
-      font-size: 1em;
-      flex: 1 1 0;
-    }
-  
-    .num {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-      border-right: 1px solid #e9e9e9;
-      color: #595959;
-      padding: 12px 8px 12px 0;
-    }
-    .ratings {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      border: 0;
-      outline: 0;
-      vertical-align: baseline;
-      background: transparent;
-      padding: 12px;
-      color: #595959;
-      text-align: center;
-      font-size: 1em;
-      flex: 1 1 0;
-      border-right: 0;
-    }
-    .average-rating {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      border: 0;
-      outline: 0;
-      vertical-align: baseline;
-      background: transparent;
-      padding: 12px;
-      color: #595959;
-      text-align: center;
-      font-size: 1em;
-      flex: 1 1 0;
-      border-right: 0;
-    }
-    .rating_img {
-      width: 73%; 
-      height: auto;
-      margin-top: -18%;
-    }
-    .actions {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      background: transparent;
-      color: #fff;
-      vertical-align: top;
-      margin-left: 4px;
-      position: relative;
-      float: right;
-      display: inline-block;
-      width: 20%;
-      
-    }
+    font-size: 1.4em;
+  }
+  .details {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    margin-top: 11px;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+  }
+  .abv {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    border-right: 1px solid #e9e9e9;
+    padding: 12px;
+    color: #595959;
+    text-align: center;
+    font-size: 1em;
+    flex: 1 1 0;
+  }
+  .ibu {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    border-right: 1px solid #e9e9e9;
+    padding: 12px;
+    color: #595959;
+    text-align: center;
+    font-size: 1em;
+    flex: 1 1 0;
+  }
 
-    .bottom {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-    }
-    .desc {
-      font-family: ProximaNova,Helvetica,sans-serif;
-      line-height: 1.25em;
-      color: #595959;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-    }
-    .clear-fix {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-      clear: both;
-    }
-    .filters {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-      display: flex;
-      flex-wrap: wrap;
-      position: absolute;
-      right: 24px;
-      top: 30px;
-    }
-    .filters span {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-      display: inline-block;
-      margin-left: 16px;
-    }
-    .filters a {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      padding: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-      color: #8a4500;
-      text-decoration: none;
-    }
-    .current {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-      display: inline-block;
-      margin-left: 16px;
-      font-weight: 600;
-    }
-    .box-activity {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-      width: 100%;
-      margin-bottom: 24px;
-    }
-    .box-content {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-      padding: 24px;
-      box-sizing: border-box;
-      position: relative;
-      border-radius: 8px;
-      background-color: #fff;
-      -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    }
-    .global-recent-activity {
-      line-height: 1;
-      font-family: ProximaNova,Helvetica,sans-serif;
-      -webkit-text-size-adjust: none;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      vertical-align: baseline;
-      background: transparent;
-      margin-bottom: 24px;
-      border-bottom: 1px solid #e5e5e5;
-      font-size: 1.4em;
-      font-weight: 600;
-      padding-bottom: 32px;
-    }
+  .num {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    border-right: 1px solid #e9e9e9;
+    color: #595959;
+    padding: 12px 8px 12px 0;
+  }
+  .ratings {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    padding: 12px;
+    color: #595959;
+    text-align: center;
+    font-size: 1em;
+    flex: 1 1 0;
+    border-right: 0;
+  }
+  .average-rating {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    padding: 12px;
+    color: #595959;
+    text-align: center;
+    font-size: 1em;
+    flex: 1 1 0;
+    border-right: 0;
+  }
+  .rating_img {
+    width: 73%;
+    height: auto;
+    margin-top: -18%;
+  }
+  .actions {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+    color: #fff;
+    vertical-align: top;
+    margin-left: 4px;
+    position: relative;
+    float: right;
+    display: inline-block;
+    width: 20%;
+  }
+
+  .bottom {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+  .desc {
+    font-family: ProximaNova, Helvetica, sans-serif;
+    line-height: 1.25em;
+    color: #595959;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+  .clear-fix {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    clear: both;
+  }
+  .filters {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 24px;
+    top: 30px;
+  }
+  .filters span {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    display: inline-block;
+    margin-left: 16px;
+  }
+  .filters a {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    color: #8a4500;
+    text-decoration: none;
+  }
+  .current {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    display: inline-block;
+    margin-left: 16px;
+    font-weight: 600;
+  }
+  .box-activity {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .box-content {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    padding: 24px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  .global-recent-activity {
+    line-height: 1;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding-bottom: 32px;
+  }
 
   .check-image {
     line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
+    font-family: ProximaNova, Helvetica, sans-serif;
     -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     font-size: 100%;
@@ -575,9 +586,7 @@
     background-repeat: no-repeat;
     margin-left: 0;
     background-color: #1b8811;
-
   }
-  
 }
 .image-wrap {
   position: relative;
@@ -598,7 +607,7 @@
   opacity: 0;
   text-align: center;
   /* transition effect. not necessary */
-  transition: opacity .2s, visibility .2s;
+  transition: opacity 0.2s, visibility 0.2s;
 }
 
 // .image-wrap:hover .checkin-drink {
@@ -610,9 +619,9 @@
 
 .delete-checkin {
   line-height: 1;
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   padding: 0;
   vertical-align: baseline;
   background: transparent;
@@ -620,7 +629,7 @@
   color: #8a4500;
   display: inline-block;
   margin: 0 12px 16px 0;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 // .drink-image:hover {

@@ -33,6 +33,7 @@ export const signup = user => dispatch => (
 );
 
 export const login = user => dispatch => (
+  console.log("hello"),
   APIUtil.login(user).then(user => (
     dispatch(receiveCurrentUser(user))
   ), err => (

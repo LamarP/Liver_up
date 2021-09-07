@@ -15,7 +15,6 @@ function Modal({ modal, closeModal }) {
       component = <CheckInFormContainer drinkId={modal[1]} />;
       break;
     case 'login':
-      console.log("ahhhhhhh");
       component = <LoginFormContainer />;
       break;
     case 'signup':

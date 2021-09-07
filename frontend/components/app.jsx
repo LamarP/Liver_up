@@ -33,11 +33,10 @@ const App = () => (
     <NavBarContainer />
 
 
-    <GreetingContainer/>
+    {/* <GreetingContainer/> */}
 
     <Switch> 
-      <AuthRoute exact path="/login" component={LogInFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+      <AuthRoute exact path="/" component={GreetingContainer} />
       <ProtectedRoute path='/thedive' component={CheckinIndexContainer} />   
       <ProtectedRoute exact path="/drinks" component={DrinkIndexContainer}/>
       <ProtectedRoute exact path="/drinks/:drinkId" component={DrinkDetailContainer} />
