@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.delete_all
 Drink.delete_all
-Review.delete_all
+# Review.delete_all
 CheckIn.delete_all
 Bar.delete_all
 
@@ -74,7 +74,7 @@ users.map do |num, details|
    username: details["username"],
    password: details["password"],
    email: details["email"],
-   img_url: "#{num}.jpeg",
+   img_url: "assets/#{num}.jpeg",
    id: num
  )
 end
