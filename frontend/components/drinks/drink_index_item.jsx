@@ -11,7 +11,7 @@ class DrinkIndexItem extends React.Component {
     return (
       <div>
         <div className="index-items">
-        <a className="label">
+        <a className="index-label">
                       <img
                         className="index-image"
                         src={this.props.drink.img_url}

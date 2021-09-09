@@ -42,6 +42,7 @@
   font-size: 1.125em;
   line-height: 1.2em;
   margin-bottom: 16px;
+  font-weight: 150;
 }
 
 .text a {
@@ -94,6 +95,7 @@
   padding: 8px;
   margin-bottom: 12px;
   box-sizing: border-box;
+  font-weight: 150;
 }
 
 .show-delete {
@@ -158,4 +160,20 @@
   padding-left: 6%;
   width: 30%;
   outline: none;
+}
+
+.author-name {
+  font-family: ProximaNova,Helvetica,sans-serif;
+  line-height: 1.2em;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  color: #8a4500;
+  text-decoration: none;
+  font-weight: 150;
+  max-width: 142px;
 }

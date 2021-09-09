@@ -37,7 +37,7 @@ const App = () => (
 
     <Switch> 
       <AuthRoute exact path="/" component={GreetingContainer} />
-      <ProtectedRoute path='/thedive' component={CheckinIndexContainer} />   
+      <ProtectedRoute exact path='/thedive' component={CheckinIndexContainer} />   
       <ProtectedRoute exact path="/drinks" component={DrinkIndexContainer}/>
       <ProtectedRoute exact path="/drinks/:drinkId" component={DrinkDetailContainer} />
       <ProtectedRoute exact path='/bars' component={BarIndexContainer}/>

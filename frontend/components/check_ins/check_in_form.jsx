@@ -59,7 +59,7 @@ class CheckInForm extends React.Component {
 
   render() {
     const preview = this.state.photoUrl ? (
-      <img src={this.state.photoUrl} />
+      <img className="prev-img" src={this.state.photoUrl} />
     ) : null;
     const showRating = (rating) => {
       if (rating === "1") return "1";
@@ -70,6 +70,7 @@ class CheckInForm extends React.Component {
       if (rating === "1") return "drunk";
       if (parseInt(rating) > 1) return `drunks`;
     };
+  
     return (
       <div className="checkin-modal-container">
         <div className="checkin-modal-box">

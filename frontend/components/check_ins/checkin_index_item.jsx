@@ -39,21 +39,22 @@ class CheckinIndexItem extends React.Component {
     }
     let drunks = drunks_arr[0];
     let checkInImg = checkIn.photoURL ? checkIn.photoURL : window.buds;
+    console.log(this.props);
     return (
       <div className="checkin-index-item">
         <div className="checkin-item-row-1">
         <div><img className="profile-pic" src={window.profile}alt="" /></div>
         {/* <div><img className="profile-pic" src={checkIn.author.img_url}alt={window.profile} /></div> */}
-          <p className="text">
-            {checkIn.authorName} is drowning in an
+          <div className="text">
+            <p className="author-name">{checkIn.authorName} </p> is drowning in an
             <Link to={`/profiles/${checkIn.author}`}></Link>
             <Link to={`/drinks/${checkIn.drinkId}`}> {checkIn.drinkName}</Link> by <Link to={`/bars/${checkIn.barId}`}>{checkIn.barName}</Link>
-          </p>
+          </div>
         </div>
         <div className="checkin-item-row-2">
           <div className="checkin-item-tri"></div>
           <div className="checkin-body">
-          {checkIn.authorName } says: <p>{ checkIn.body}</p>
+          <p className="author-name">{checkIn.authorName }</p> says: <p>{ checkIn.body}</p>
             <div className="checkin-body-bottom"> 
             <img className="check-rating-img" src={drunks} width='30%' height="auto" />
             <img className="checkin-image" src={checkInImg} alt={`an image of the drink `} />
