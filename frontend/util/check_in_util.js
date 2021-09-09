@@ -25,7 +25,6 @@ export const createCheckIn = checkin => {
 };
 
 export const deleteCheckIn = (checkinId) => {
-  console.log(checkinId)
     return $.ajax({
       method: 'DELETE',
       url: `/api/check_ins/${parseInt(checkinId)}`

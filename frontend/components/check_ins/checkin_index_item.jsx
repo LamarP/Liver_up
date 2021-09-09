@@ -20,7 +20,6 @@ class CheckinIndexItem extends React.Component {
  
 
   render() {
-    console.log(this.props);
     const {checkIn, sessionId} = this.props;
     const showDelete = checkIn.author_id === sessionId ? "show-delete" : "hide-delete"
     let drunks_arr = [];
@@ -41,7 +40,7 @@ class CheckinIndexItem extends React.Component {
     let drunks = drunks_arr[0];
     let checkInImg = checkIn.photoURL ? checkIn.photoURL : window.buds;
     let userImg = checkIn.author.img_url ? checkIn.author.img_url : window.profile;
-    console.log(this.props);
+
     return (
       <div className="checkin-index-item">
         <div className="checkin-item-row-1">
