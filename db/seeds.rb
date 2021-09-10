@@ -14,19 +14,19 @@ Bar.delete_all
 # b5
 bars = {
   '1' => {
-    "name" => "Paddy's Pub", "location" => 'Philadelphia, Pennsylvania', "style" => 'Irish Pub', "img_url" => "paddys.jpeg"
+    "name" => "Paddy's Pub", "location" => 'Philadelphia, Pennsylvania', "style" => 'Irish Pub', "img_url" => "paddys.jpg"
   },
   '2' => {
-    "name" => "Moe's Tavern", "location" => 'Springfield, Oregon', "style" => 'Dive bar', "img_url" => 'moes.jpeg'
+    "name" => "Moe's Tavern", "location" => 'Springfield, Oregon', "style" => 'Dive bar', "img_url" => 'moes.jpg'
   },
   '3' => {
-    "name" => 'gamsaan', "location" => 'San Francisco, California', "style" => 'cocktail', "img_url" => 'gamsaan.jpeg'
+    "name" => 'gamsaan', "location" => 'San Francisco, California', "style" => 'cocktail', "img_url" => 'gamsaan.jpg'
   },
   '4' => {
-    "name" => 'Cheers', "location" => 'Boston, Massachusetts', "style" => 'Pub', "img_url" => 'cheers.jpeg'
+    "name" => 'Cheers', "location" => 'Boston, Massachusetts', "style" => 'Pub', "img_url" => 'cheers.jpg'
   },
   '5' => {
-    "name" => "Ugly's Saloon", "location" => 'Arlen, Texas', "style" => 'Country Western', "img_url" => 'uglys_saloon.jpeg'
+    "name" => "Ugly's Saloon", "location" => 'Arlen, Texas', "style" => 'Country Western', "img_url" => 'uglys_saloon.jpg'
   }  
 }
 bars.map do |num, details|
@@ -74,7 +74,7 @@ users.map do |num, details|
    username: details["username"],
    password: details["password"],
    email: details["email"],
-   img_url: "assets/#{num}.jpeg",
+   img_url: "assets/#{num}.jpg",
    id: num
  )
 end

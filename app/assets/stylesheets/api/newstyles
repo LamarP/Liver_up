@@ -167,7 +167,7 @@ bar-detail styles
   position: absolute;
 }
 .bar-header {
-  background: image-url("bar-header.jpeg");
+  background: image-url("bar-header.jpg");
   height: 260px;
   width: 100%;
   display: flex;
