@@ -74,7 +74,7 @@ users.map do |num, details|
    username: details["username"],
    password: details["password"],
    email: details["email"],
-   img_url: "#{num}.jpg",
+   img_url: "#{num}-user.png",
    id: num
  )
 end
