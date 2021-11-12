@@ -9,7 +9,8 @@ class Navbar extends React.Component {
 
   render() {
     const { currentUser } = this.props;
-    if (this.props.currentUser === undefined) {
+
+    if (currentUser === undefined) {
       return null;
     } else {
       return (

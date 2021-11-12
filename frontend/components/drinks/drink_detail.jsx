@@ -21,7 +21,8 @@ class DrinkDetail extends React.Component {
   }
 
   render() {
-    if (!this.props.drink) return null;
+    console.log(this.props.drink);
+    if (!this.props.drink || !this.props.bar) return null;
 
     const drinkId = parseInt(this.props.match.params.drinkId);
     const checkIn_arr = Object.values(this.props.checkIns).filter(

@@ -30,11 +30,11 @@ const App = () => (
   <div className="test">
       
     <Modal />
-    <NavBarContainer />
+    {/* <NavBarContainer /> */}
 
 
     {/* <GreetingContainer/> */}
-
+    <ProtectedRoute path="/" component={NavBarContainer} />
     <Switch> 
       <AuthRoute exact path="/" component={GreetingContainer} />
       <ProtectedRoute exact path='/thedive' component={CheckinIndexContainer} />   
