@@ -39,7 +39,7 @@ class Profile extends React.Component {
         <div className="cont-profile-page">
           <div className="main">
             <div className="profile-cover">
-              <img className="profile-image" src={window.profile} alt="" />
+              <img className="profile-image" src={window.profile} alt={window.profile} />
               <div className="profile-content">
                 <p className="profile-username">{username}</p>
                 <div className="profile-stats">

@@ -14,3 +14,5 @@ json.checkins do
     end
   end
 end
+
+json.photoURL url_for(@user.photo) if @user.photo.attached?

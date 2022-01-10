@@ -37,7 +37,7 @@ class CheckinIndexItem extends React.Component {
     } else {
       drunks_arr.push (window.zeroDrunks);
     }
-    console.log("here I am", checkIn.author);
+
     let drunks = drunks_arr[0];
     let checkInImg = checkIn.photoURL ? checkIn.photoURL : window.buds;
     let userImg = checkIn.authorImg ? checkIn.authorImg : window.profile;

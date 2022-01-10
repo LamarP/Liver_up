@@ -7,6 +7,8 @@ class SessionForm extends React.Component {
       username: "",
       password: "",
       email: "",
+      photoFile: null,
+      photoUrl: null,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemoUser = this.handleDemoUser.bind(this);
@@ -49,6 +51,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+
     return (
       <div>
         <div className="login-form-container">
@@ -106,7 +109,7 @@ class SessionForm extends React.Component {
                 Secret Entrance
               </button>
             </div>
-            <ul className="nav-link">New around here? {this.props.otherForm}</ul>
+            <ul className="nav-link">{this.props.greeting} {this.props.otherForm}</ul>
           </form>
         </div>
 

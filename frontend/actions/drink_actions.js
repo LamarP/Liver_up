@@ -2,7 +2,8 @@ import * as DrinkAPIUtil from '../util/drink_util';
 
 export const RECEIVE_ALL_DRINKS = 'RECEIVE_ALL_DRINKS';
 export const RECEIVE_DRINK = 'RECEIVE_DRINK';
-// export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const START_LOADING_ALL_DRINKS = 'START_LOADING_ALL_DRINKS';
+export const START_LOADING_DRINK = 'START_LOADING_DRINK';
 
 export const receiveAllDrinks = drinks => ({
   type: RECEIVE_ALL_DRINKS,
@@ -14,16 +15,25 @@ export const receiveDrink = payload => ({
   payload
 })
 
+export const startLoadingAllDrinks = () => ({
+  type: START_LOADING_ALL_DRINKS
+});
 
-export const fetchAllDrinks = () => dispatch =>(
-    DrinkAPIUtil.fetchAllDrinks()
+export const startLoadingDrink = () => ({
+  type: START_LOADING_DRINK
+});
+
+export const fetchAllDrinks = () => dispatch => {
+  dispatch(startLoadingAllDrinks());
+  return DrinkAPIUtil.fetchAllDrinks()
     .then(drinks => dispatch(receiveAllDrinks(drinks)))
-)
+}
 
-export const fetchDrink = drink_id => dispatch =>(
-    DrinkAPIUtil.fetchDrink(drink_id)
-    .then(payload => dispatch(receiveDrink(payload)))
-)
+export const fetchDrink = drink_id => dispatch => {
+  dispatch(startLoadingDrink(drink_id));
+  return DrinkAPIUtil.fetchDrink(drink_id)
+  .then(payload => dispatch(receiveDrink(payload)))
+}
 
 
 

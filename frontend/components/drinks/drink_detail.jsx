@@ -21,7 +21,7 @@ class DrinkDetail extends React.Component {
   }
 
   render() {
-    console.log(this.props.drink);
+
     if (!this.props.drink || !this.props.bar) return null;
 
     const drinkId = parseInt(this.props.match.params.drinkId);

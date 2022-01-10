@@ -11,9 +11,9 @@ const mapStateToProps = (state, ownProps) => {
   if (drink) {
     bar = state.entities.bars[drink.bar_id]
   }
-  // console.log(state.entities.drinks[ownProps.match.params.drinkId]);
+
   return {
-    // drink: drink,
+
     drink: state.entities.drinks[ownProps.match.params.drinkId],
     checkIns: state.entities.checkIns,
     bar: bar
