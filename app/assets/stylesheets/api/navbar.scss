@@ -1,9 +1,8 @@
 .navbar {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
   flex-direction: row;
-  // position: fixed;
   background-color: rgba(247, 239, 230, 0.349);
   color: white;
   text-align: center;
@@ -11,19 +10,16 @@
   border-top: 12px solid rgb(66, 65, 65);
   border-bottom: 52px solid rgba(28, 60, 119, 0.76);
   width: 100%;
-  // flex-flow: row wrap;
   flex-grow: 1;
-  z-index:1000;
-  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.30);
-  // overflow: hidden;
-  
+  z-index: 1000;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
 }
 
 #nav-links {
   line-height: 1;
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   border: 0;
   outline: 0;
   font-size: 100%;
@@ -46,7 +42,6 @@
   text-decoration: none;
 }
 
-
 @media all and (max-width: 800px) {
   .navbar {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
@@ -66,7 +61,6 @@
   margin-left: 20px;
   color: black;
   text-decoration: none;
-  
 }
 .logo-div {
   float: left;
@@ -74,12 +68,7 @@
 
 .nav-area {
   display: flex;
-  
 }
-
-
-
-
 
 .navbar-dive {
   color: #0e0d0d;
@@ -92,7 +81,6 @@
   text-decoration: none;
   float: left;
 }
-
 
 .navbar-drinks {
   color: #0e0d0d;
@@ -120,11 +108,9 @@
   right: -5px;
 }
 
-
-.dropdown-outer {
-// float: right;
-flex-grow: 2;
-}
+// .dropdown-outer {
+//   flex-grow: 2;
+// }
 
 .dropdown {
   justify-content: center;
@@ -133,10 +119,10 @@ flex-grow: 2;
   width: 30px;
   color: white;
 }
-.dropdown .a{
-  color: white;
-  font-size:0.9em;
-}
+// .dropdown .a {
+//   color: white;
+//   font-size: 0.9em;
+// }
 .dropdown .dropbtn {
   border: none;
   outline: none;
@@ -144,27 +130,22 @@ flex-grow: 2;
   background-color: transparent;
 }
 
-
-
 .dropdown-content {
-display: none;
-position: absolute;
-background-color: rgb(36, 34, 34);
-min-width: 160px;
-height: 100%;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-font-size: 100%;
-line-height: 1;
-font-family: ProximaNova,Helvetica,sans-serif;
-color: white;
-
+  display: none;
+  position: absolute;
+  background-color: rgb(36, 34, 34);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-size: 100%;
+  line-height: 1;
+  font-family: ProximaNova, Helvetica, sans-serif;
+  color: white;
+  height: 200px;
 }
 
-.dropdown-content:after { 
-  // content: '⬆';
-  // display: flex;
-  content:"";
+.dropdown-content:after {
+  content: "";
   position: absolute;
   right: 70%;
   top: -10.5px;
@@ -173,42 +154,34 @@ color: white;
   border-style: solid;
   border-width: 0 17px 17px 17px;
   border-color: transparent transparent rgb(36, 34, 34) transparent;
-
-  z-index:9998;
-  
+  z-index: 9998;
 }
 
 .dropdown-link {
   color: white;
-  float: none;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-text-align: left;
-cursor: pointer;
-border-bottom: 1px solid grey;
+  cursor: pointer;
 }
-
-.dropdown:hover .dropdown-content {
-display: block;
-position: absolute;
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column; 
 }
 
 .profile-img {
-      line-height: 1;
-    font-family: ProximaNova,Helvetica,sans-serif;
-    -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-    width: 36px;
-    height: 36px;
-    display: block;
-    border-radius: 18px;
-    overflow: hidden;
+  line-height: 1;
+  font-family: ProximaNova, Helvetica, sans-serif;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  width: 36px;
+  height: 36px;
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
 }

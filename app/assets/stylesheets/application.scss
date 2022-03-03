@@ -13,18 +13,13 @@
  *= require_tree .
  *= require_self
  */
- 
-
 
 body {
-  font-family: 'Abel', sans-serif;
-  min-height:100%;
-  // background-image: url("background.png");
+  font-family: "Abel", sans-serif;
+  min-height: 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-size:cover;
-  // display: flex;
- 
+  background-size: cover;
 }
 
 .content {
@@ -34,52 +29,36 @@ body {
 header {
   margin-top: 5%;
   margin-right: 5%;
-  
 }
 
-  
 .header-name {
-    margin: 7px 0 0 0;
-    padding: 15px 20px
+  margin: 7px 0 0 0;
+  padding: 15px 20px;
 }
-  
-  
-  
-// .header-link {
- 
-// }
-  
+
 .hr {
-    border-bottom: 1px solid grey;
-    }
-  
-  .session-submit {
-    text-transform: capitalize;
-    
-  }
- 
-  
-    .background-img {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    // width: 100%;
-    object-fit: cover;
-    filter: brightness(59%);
-    -webkit-filter: brightness(59%);
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    overflow: auto;
-    top: 0px;
-    left: 0px;
-    background: rgba(0, 0, 0, 0.7);
-    display: table;
-    // width: 100%;
-    // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    // background-position: center top;
-    // height: 350px;
-  }
-  
+  border-bottom: 1px solid grey;
+}
+
+.session-submit {
+  text-transform: capitalize;
+}
+
+.background-img {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  object-fit: cover;
+  filter: brightness(59%);
+  -webkit-filter: brightness(59%);
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: auto;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  display: table;
+}

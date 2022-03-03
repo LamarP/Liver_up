@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ProfileContainer from "../profile/profile_container";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -40,8 +39,8 @@ class Navbar extends React.Component {
                 </Link>
               </button>
 
-              <div className="dropdown-content">
-                <ul>
+              <ul className="dropdown-content">
+                
                   <li>
                     <Link
                       className="dropdown-link"
@@ -55,8 +54,13 @@ class Navbar extends React.Component {
                       Logout
                     </a>
                   </li>
-                </ul>
-              </div>
+                {/* <li>
+                  <a className="dropdown-link">
+                    Profile Picture
+                  </a>
+                  </li> */}
+                
+              </ul>
             </div>
           </div>
         </div>

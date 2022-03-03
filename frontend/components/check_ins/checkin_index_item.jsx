@@ -40,12 +40,11 @@ class CheckinIndexItem extends React.Component {
 
     let drunks = drunks_arr[0];
     let checkInImg = checkIn.photoURL ? checkIn.photoURL : window.buds;
-    let userImg = checkIn.authorImg ? checkIn.authorImg : window.profile;
-
+    let userImgId = checkIn.author_id;
     return (
       <div className="checkin-index-item">
         <div className="checkin-item-row-1">
-        <div><img className="profile-pic" src={userImg}alt="" /></div>
+        <div><img className="profile-pic" src={`/assets/profile_pics/${userImgId}-user.png`}alt="" /></div>
         {/* <div><img className="profile-pic" src={checkIn.author.img_url}alt={window.profile} /></div> */}
           <div className="text">
             <p className="author-name">{checkIn.authorName} </p> is drowning in an

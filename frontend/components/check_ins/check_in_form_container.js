@@ -10,7 +10,6 @@ const mapStateToProps = (state, ownProps) => {
   return {
     authorId: state.session.id,
     drinkId: ownProps.drinkId,
-    // drink: state.entities.drinks[ownProps.match.params.drinkId],
     errors: state.errors.checkin
   }
 };

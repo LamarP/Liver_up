@@ -184,3 +184,4 @@ CheckIn.create!([
   {drink_id: 2, author_id: 1, body: "gimme back my keys!", rating: 2},
   {drink_id: 7, author_id: 6, body: "I mean it's one banana, Michael. What could it cost? 10 dollars?", rating: 2}
   ])
+  
