@@ -44,7 +44,7 @@ class CheckinIndexItem extends React.Component {
     return (
       <div className="checkin-index-item">
         <div className="checkin-item-row-1">
-        <div><img className="profile-pic" src={`/assets/profile_pics/${userImgId}-user.png`}alt="" /></div>
+        <div><img className="profile-pic" src={window[`user${userImgId}`]} alt="" /></div>
         {/* <div><img className="profile-pic" src={checkIn.author.img_url}alt={window.profile} /></div> */}
           <div className="text">
             <p className="author-name">{checkIn.authorName} </p> is drowning in an
