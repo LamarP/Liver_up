@@ -1,8 +1,8 @@
 .checkin {
   line-height: 1;
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
   border: 0;
@@ -16,9 +16,9 @@
 
 .checkin-top {
   line-height: 1;
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
   border: 0;
@@ -30,9 +30,9 @@
 }
 
 .text {
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
   border: 0;
@@ -46,10 +46,10 @@
 }
 
 .text a {
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   line-height: 1.2em;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -60,9 +60,9 @@
 }
 
 .box-flex {
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   outline: 0;
   vertical-align: baseline;
@@ -79,9 +79,9 @@
 }
 
 .checkin-body {
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   outline: 0;
   vertical-align: baseline;
@@ -100,9 +100,9 @@
 
 .show-delete {
   line-height: 1;
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   padding: 0;
   vertical-align: baseline;
   background: transparent;
@@ -110,7 +110,7 @@
   text-decoration: none;
   display: inline-block;
   margin: 0 12px 16px 0;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .hide-delete {
@@ -119,9 +119,9 @@
 
 .profile-pic {
   line-height: 1;
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
   border: 0;
@@ -137,16 +137,16 @@
   margin-bottom: 12px;
 }
 .checkin-index-item {
-  width: 100%
+  width: 100%;
 }
 .checkin-body-bottom {
   display: flex;
 }
 .checkin-image {
   line-height: 1;
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -163,10 +163,10 @@
 }
 
 .author-name {
-  font-family: ProximaNova,Helvetica,sans-serif;
+  font-family: ProximaNova, Helvetica, sans-serif;
   line-height: 1.2em;
   -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -176,4 +176,28 @@
   text-decoration: none;
   font-weight: 150;
   max-width: 142px;
+}
+
+.like-button {
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  position: relative;
+  text-rendering: auto;
+  color: white;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  cursor: pointer;
+  background-color: black;
+  box-sizing: border-box;
+  font: 18px proximaNova, helvetica, sans-serif;
+  padding: 1px 7px;
+  border-width: 1px;
+  border-radius: 5px;
+  width: 69px;
+  height: 35px;
+  margin-top: 3%;
+  float: right;
 }

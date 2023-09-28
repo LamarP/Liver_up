@@ -25,6 +25,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ReplaceIndexItem from './check_ins/replacement_index_item';
 library.add(fas, fab);
 const App = () => (
   <div className="test">
@@ -37,12 +38,12 @@ const App = () => (
     <ProtectedRoute path="/" component={NavBarContainer} />
     <Switch> 
       <AuthRoute exact path="/" component={GreetingContainer} />
-      <ProtectedRoute exact path='/thedive' component={CheckinIndexContainer} />   
+      <ProtectedRoute exact path='/thedive' component={CheckinIndexContainer} />      
       <ProtectedRoute exact path="/drinks" component={DrinkIndexContainer}/>
       <ProtectedRoute exact path="/drinks/:drinkId" component={DrinkDetailContainer} />
       <ProtectedRoute exact path='/bars' component={BarIndexContainer}/>
       <ProtectedRoute exact path='/bars/:barId' component={BarDetailContainer}/>
-      <ProtectedRoute exact path="/checkIns/:checkInId" component={CheckInShowContainer} /> 
+      <ProtectedRoute exact path="/checkIns/:checkInId" component={CheckInShowContainer} />
       <ProtectedRoute exact path='/profiles/:profileId' component={ProfileContainer}/>
 
 
