@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-
+import CheckInShow from "./check_in_show";
 class CheckInForm extends React.Component {
   constructor(props) {
     super(props);
